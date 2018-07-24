@@ -19,7 +19,6 @@ README.mediawiki
 # style guide #
 ##############
 .php_cs.cache
-wpcs
 
 # installed G2 #
 ##############
