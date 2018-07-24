@@ -1,0 +1,27 @@
+#
+# Exclude these files from release archives.
+#
+/.travis.yml export-ignore
+/.php_cs.dist export-ignore
+/.php_cs.cache export-ignore
+/.svn export-ignore
+/.svnignore export-ignore
+/.editorconfig export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore
+/phpcs.xml export-ignore
+/README.mediawiki export-ignore
+/wpcs export-ignore
+
+#
+# Auto detect text files and perform LF normalization
+# http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
+#
+* text=auto
+
+#
+# The above will handle all files NOT found below
+#
+*.php text
+*.inc text
+*.class text

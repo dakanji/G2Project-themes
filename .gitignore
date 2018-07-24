@@ -1,0 +1,51 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# svn folder #
+##############
+**/.svn
+
+# git README #
+##############
+README.mediawiki
+
+# style guide #
+##############
+.php_cs.cache
+wpcs
+
+# installed G2 #
+##############
+g2data
+config.php
+.htaccess
+
+# IDE stuff #
+##############
+.idea
+build
+attic
+
+# Non G2 Modules #
+##############
+/index.php
+/main.php
+/embed.php
+/bootstrap.inc
+/init.inc
+/README.html
+/MANIFEST
+/lib
+/images
+/install
+/locale
+/upgrade
+/modules
+/themes/matrix
