@@ -1,12 +1,3 @@
-<style>
-    body {
-        text-align: justify
-    }
-    ol { 
-        list-style-type: lower-alpha; 
-    }
-</style>
-
 # CONTRIBUTING
 
 To get started, please sign the <a href="https://www.clahub.com/agreements/dakanji/G2Project-themes">Contributor License Agreement</a>.  
