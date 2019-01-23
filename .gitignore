@@ -1,4 +1,4 @@
-# OS generated files #
+## OS generated files #
 ######################
 .DS_Store
 .DS_Store?
@@ -12,19 +12,18 @@ Thumbs.db
 ##############
 **/.svn
 
-# git README #
-##############
-README.mediawiki
-
 # style guide #
 ##############
 .php_cs.cache
+dev_vendor
 
 # installed G2 #
 ##############
 g2data
 config.php
 .htaccess
+authFile.txt
+login.txt
 
 # IDE stuff #
 ##############
@@ -32,8 +31,8 @@ config.php
 build
 attic
 
-# Non G2 Modules #
-##############
+# Non G2 Themes #
+#################
 /index.php
 /main.php
 /embed.php
@@ -47,6 +46,9 @@ attic
 /locale
 /upgrade
 /modules
+
+# G2 Themes #
+#############
 /themes/carbom
 /themes/matrix
 /themes/siriux
