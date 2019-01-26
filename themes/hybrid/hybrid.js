@@ -55,9 +55,9 @@ function app_init() {
 	}
 
 	if (app_is_ie) {
-		document.onkeydown                                       = app_onkeydown;
-		document.getElementById('imageview').style.position      = 'absolute';
-		popup.style.position                                     = 'absolute';
+		document.onkeydown = app_onkeydown;
+		document.getElementById('imageview').style.position = 'absolute';
+		popup.style.position = 'absolute';
 		document.getElementById('popup_titlebar').style.position = 'absolute';
 	} else if (app_is_safari) {
 		document.getElementById('tools_right').style.paddingRight = '8px';
@@ -394,7 +394,7 @@ function image_zoom(on,noresize) {
 	if (image_zoomon = on) {
 		ui_vis('full_size', 0);
 		ui_vis('fit_size', 1, 1);
-		var h                     = imagearea.offsetHeight - data_ih[image_index];
+		var h = imagearea.offsetHeight - data_ih[image_index];
 		imagediv.style.paddingTop = max(Math.floor(h / 2), 0) + 'px';
 		document.view.width       = data_iw[image_index];
 		document.view.height      = data_ih[image_index];

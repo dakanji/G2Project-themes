@@ -38,19 +38,23 @@ class SliderTheme extends GalleryTheme {
 		$this->setVersion('1.0.11');
 		$this->setRequiredCoreApi(array(7, 36));
 		$this->setRequiredThemeApi(array(2, 5));
-		$this->setStandardSettings(array(
-			'colorpack'      => '',
-			'sidebarBlocks'  => serialize(array(
-				array(
-					'search.SearchBlock',
+		$this->setStandardSettings(
+			array(
+				'colorpack'      => '',
+				'sidebarBlocks'  => serialize(
 					array(
-						'showAdvancedLink' => true,
-					),
+						array(
+							'search.SearchBlock',
+							array(
+								'showAdvancedLink' => true,
+							),
+						),
+						array('imageblock.ImageBlock', array()),
+					)
 				),
-				array('imageblock.ImageBlock', array()),
-			)),
-			'enableImageMap' => 0,
-		));
+				'enableImageMap' => 0,
+			)
+		);
 	}
 
 	/**
@@ -64,11 +68,11 @@ class SliderTheme extends GalleryTheme {
 		}
 
 		$settings[] = array(
-			'key'   => 'enableImageMap',
-			'name'  => $this->translate(
+			'key'  => 'enableImageMap',
+			'name' => $this->translate(
 				'Enable prev/next navigation by clicking in the left/right half of the image'
 			),
-			'type'  => 'checkbox',
+			'type' => 'checkbox',
 			'value' => $params['enableImageMap'],
 		);
 
@@ -128,10 +132,13 @@ class SliderTheme extends GalleryTheme {
 				// Malicious URL.. renderId not for this item
 				return array(GalleryCoreApi::error(ERROR_MISSING_OBJECT), null);
 			}
-			$template->setVariable('theme', array(
-				'item'  => (array)$item,
-				'image' => (array)$image,
-			));
+			$template->setVariable(
+				'theme',
+				array(
+					'item'  => (array)$item,
+					'image' => (array)$image,
+				)
+			);
 
 			return array(null, 'render.tpl');
 		}
@@ -324,8 +331,8 @@ class SliderTheme extends GalleryTheme {
 						return array($ret, null, null);
 					}
 				}
-				$image                      = (array)$image;
-				$children[$i]['image']      = $image;
+				$image                 = (array)$image;
+				$children[$i]['image'] = $image;
 				$children[$i]['imageIndex'] = count($imageWidths);
 
 				if (GalleryUtilities::isExactlyA($child, 'GalleryPhotoItem')

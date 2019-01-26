@@ -45,17 +45,21 @@ class AjaxianTheme extends GalleryTheme {
 				'colorpack'       => '',
 				'showMicroThumbs' => 0,
 				'sidebarBlocks'   => serialize(array()),
-				'albumBlocks'     => serialize(array(
+				'albumBlocks'     => serialize(
 					array(
-						'core.ItemLinks',
 						array(
-							'useDropdown' => true,
+							'core.ItemLinks',
+							array(
+								'useDropdown' => true,
+							),
 						),
-					),
-				)),
-				'photoBlocks'     => serialize(array(
-					array('exif.ExifInfo', array()),
-				)),
+					)
+				),
+				'photoBlocks'     => serialize(
+					array(
+						array('exif.ExifInfo', array()),
+					)
+				),
 			)
 		);
 	}

@@ -132,11 +132,14 @@ function hideControlBar() {
 	 * 1500 milliseconds has passed. Mousing over the controls' action area
 	 * within this time will reset the timeout.
 	 */
-	hideControlsInterval = setTimeout(function () {
-		if (controls.state == 'shown' || controls.state == 'showing') {
-			hideControlsInterval = setInterval('animateControlHide()', 50);
-		}
-	}, 1500);
+	hideControlsInterval = setTimeout(
+		function () {
+			if (controls.state == 'shown' || controls.state == 'showing') {
+				hideControlsInterval = setInterval('animateControlHide()', 50);
+			}
+		},
+		1500
+	);
 }
 
 function animateControlShow() {

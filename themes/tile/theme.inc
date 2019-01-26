@@ -35,25 +35,29 @@ class TileTheme extends GalleryTheme {
 		$this->setVersion('1.0.10');
 		$this->setRequiredCoreApi(array(7, 27));
 		$this->setRequiredThemeApi(array(2, 5));
-		$this->setStandardSettings(array(
-			'colorpack'     => '',
-			'sidebarBlocks' => serialize(array(
-				array(
-					'search.SearchBlock',
+		$this->setStandardSettings(
+			array(
+				'colorpack'     => '',
+				'sidebarBlocks' => serialize(
 					array(
-						'showAdvancedLink' => true,
-					),
+						array(
+							'search.SearchBlock',
+							array(
+								'showAdvancedLink' => true,
+							),
+						),
+						array(
+							'core.ItemLinks',
+							array(
+								'useDropdown' => false,
+							),
+						),
+						array('core.PeerList', array()),
+						array('imageblock.ImageBlock', array()),
+					)
 				),
-				array(
-					'core.ItemLinks',
-					array(
-						'useDropdown' => false,
-					),
-				),
-				array('core.PeerList', array()),
-				array('imageblock.ImageBlock', array()),
-			)),
-		));
+			)
+		);
 	}
 
 	public function _setDefaultParameters(&$params) {
@@ -158,10 +162,13 @@ class TileTheme extends GalleryTheme {
 				// Malicious URL.. renderId not for this item
 				return array(GalleryCoreApi::error(ERROR_MISSING_OBJECT), null);
 			}
-			$template->setVariable('theme', array(
-				'item'  => (array)$item,
-				'image' => (array)$image,
-			));
+			$template->setVariable(
+				'theme',
+				array(
+					'item'  => (array)$item,
+					'image' => (array)$image,
+				)
+			);
 
 			return array(null, 'render.tpl');
 		}
@@ -352,8 +359,8 @@ class TileTheme extends GalleryTheme {
 						return array($ret, null, null);
 					}
 				}
-				$image                      = (array)$image;
-				$children[$i]['image']      = $image;
+				$image                 = (array)$image;
+				$children[$i]['image'] = $image;
 				$children[$i]['imageIndex'] = count($imageWidths);
 
 				if (GalleryUtilities::isExactlyA($child, 'GalleryPhotoItem')

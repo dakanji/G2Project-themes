@@ -48,23 +48,29 @@ class FloatrixTheme extends GalleryTheme {
 				'colorpack'       => '',
 				'showMicroThumbs' => 0,
 				'dynamicLinks'    => 'browse',
-				'sidebarBlocks'   => serialize(array(
+				'sidebarBlocks'   => serialize(
 					array(
-						'core.ItemLinks',
 						array(
-							'useDropdown' => false,
+							'core.ItemLinks',
+							array(
+								'useDropdown' => false,
+							),
 						),
-					),
-					array('core.PeerList', array()),
-					array('imageblock.ImageBlock', array()),
-				)),
-				'albumBlocks'     => serialize(array(
-					array('comment.ViewComments', array()),
-				)),
-				'photoBlocks'     => serialize(array(
-					array('exif.ExifInfo', array()),
-					array('comment.ViewComments', array()),
-				)),
+						array('core.PeerList', array()),
+						array('imageblock.ImageBlock', array()),
+					)
+				),
+				'albumBlocks'     => serialize(
+					array(
+						array('comment.ViewComments', array()),
+					)
+				),
+				'photoBlocks'     => serialize(
+					array(
+						array('exif.ExifInfo', array()),
+						array('comment.ViewComments', array()),
+					)
+				),
 			)
 		);
 	}

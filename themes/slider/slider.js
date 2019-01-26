@@ -39,7 +39,7 @@ function app_init() {
 		image_area.style.width                  = title_div.style.width = '100%';
 		thumb_div.style.overflow                = 'scroll';
 		document.body.parentNode.style.overflow = 'hidden';
-		document.onkeydown                      = app_onkeydown;
+		document.onkeydown = app_onkeydown;
 	} else if (app_is_opera) {
 		document.getElementById('options').style.width = '180px';
 	}
@@ -270,7 +270,7 @@ function image_zoom(on,noresize) {
 	if (image_zoomon = on) {
 		ui_vis('full_size', 0);
 		ui_vis('fit_size', 1, 1);
-		var h                      = image_area.offsetHeight - data_ih[image_index];
+		var h = image_area.offsetHeight - data_ih[image_index];
 		image_div.style.paddingTop = max(Math.floor(h / 2), 0) + 'px';
 		document.slide.width       = data_iw[image_index];
 		document.slide.height      = data_ih[image_index];
@@ -314,13 +314,13 @@ function image_setbuttons() {
 	ui_vis('prev_off', j < 0, 1);
 }
 function set_image_map(w,h,ww) {
-	var map                           = document.getElementById('prevnext'),
-	  pa                              = document.getElementById('prevArrow'), na = document.getElementById('nextArrow'),
-	  sw                              = max(Math.floor(ww / 2),0) + 30, i = slide_nextindex(), j = slide_previndex();
-	map.firstChild.coords             = '0,0,' + (j >= 0 ? Math.floor(w / 2) + ',' + h : '0,0');
+	var map               = document.getElementById('prevnext'),
+	  pa                  = document.getElementById('prevArrow'), na = document.getElementById('nextArrow'),
+	  sw                  = max(Math.floor(ww / 2),0) + 30, i = slide_nextindex(), j = slide_previndex();
+	map.firstChild.coords = '0,0,' + (j >= 0 ? Math.floor(w / 2) + ',' + h : '0,0');
 	map.firstChild.nextSibling.coords = (i >= 0 ? (Math.floor(w / 2) + 1) + ',0' : w + ',' + h) + ',' + w + ',' + h;
-	pa.style.left                     = sw + 'px';
-	na.style.right                    = sw + 'px';
+	pa.style.left  = sw + 'px';
+	na.style.right = sw + 'px';
 }
 
 //Class slide

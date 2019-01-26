@@ -35,49 +35,51 @@ class HybridTheme extends GalleryTheme {
 		$this->setVersion('1.1.10');
 		$this->setRequiredCoreApi(array(7, 36));
 		$this->setRequiredThemeApi(array(2, 5));
-		$this->setStandardSettings(array(
-			'rows'             => 30,
-			'columns'          => 2,
-			'albumFrame'       => '',
-			'itemFrame'        => '',
-			'colorpack'        => '',
-			'sidebarBlocks'    => serialize(
-				array(
+		$this->setStandardSettings(
+			array(
+				'rows' => 30,
+				'columns' => 2,
+				'albumFrame' => '',
+				'itemFrame' => '',
+				'colorpack' => '',
+				'sidebarBlocks' => serialize(
 					array(
-						'search.SearchBlock',
 						array(
-							'showAdvancedLink' => true,
+							'search.SearchBlock',
+							array(
+								'showAdvancedLink' => true,
+							),
 						),
-					),
+						array(
+							'core.ItemLinks',
+							array(
+								'useDropdown' => false,
+							),
+						),
+						array('core.PeerList', array()),
+						array('imageblock.ImageBlock', array()),
+					)
+				),
+				'albumBlocks' => serialize(
+					array(array('comment.ViewComments', array()))
+				),
+				'photoBlocks' => serialize(
 					array(
-						'core.ItemLinks',
-						array(
-							'useDropdown' => false,
-						),
-					),
-					array('core.PeerList', array()),
-					array('imageblock.ImageBlock', array()),
-				)
-			),
-			'albumBlocks'      => serialize(
-				array(array('comment.ViewComments', array()))
-			),
-			'photoBlocks'      => serialize(
-				array(
-					array('exif.ExifInfo', array()),
-					array('comment.ViewComments', array()),
-				)
-			),
-			'showText'         => 1,
-			'showAlbumDate'    => 1,
-			'showImageDate'    => 1,
-			'showDateInViewer' => 1,
-			'showSize'         => 1,
-			'showViewCount'    => 1,
-			'showAlbumOwner'   => 0,
-			'showImageOwner'   => 0,
-			'thumbTitle'       => 'none',
-		));
+						array('exif.ExifInfo', array()),
+						array('comment.ViewComments', array()),
+					)
+				),
+				'showText' => 1,
+				'showAlbumDate' => 1,
+				'showImageDate' => 1,
+				'showDateInViewer' => 1,
+				'showSize' => 1,
+				'showViewCount' => 1,
+				'showAlbumOwner' => 0,
+				'showImageOwner' => 0,
+				'thumbTitle' => 'none',
+			)
+		);
 	}
 
 	/**
@@ -92,45 +94,45 @@ class HybridTheme extends GalleryTheme {
 
 		// Add in our custom settings
 		$settings[] = array(
-			'key'   => 'showText',
-			'name'  => $this->translate('Show text with thumbnails'),
-			'type'  => 'checkbox',
+			'key'  => 'showText',
+			'name' => $this->translate('Show text with thumbnails'),
+			'type' => 'checkbox',
 			'value' => $params['showText'],
 		);
 		$settings[] = array(
-			'key'   => 'showAlbumDate',
-			'name'  => $this->translate('Show dates for albums'),
-			'type'  => 'checkbox',
+			'key'  => 'showAlbumDate',
+			'name' => $this->translate('Show dates for albums'),
+			'type' => 'checkbox',
 			'value' => $params['showAlbumDate'],
 		);
 		$settings[] = array(
-			'key'   => 'showImageDate',
-			'name'  => $this->translate('Show dates with thumbnails'),
-			'type'  => 'checkbox',
+			'key'  => 'showImageDate',
+			'name' => $this->translate('Show dates with thumbnails'),
+			'type' => 'checkbox',
 			'value' => $params['showImageDate'],
 		);
 		$settings[] = array(
-			'key'   => 'showDateInViewer',
-			'name'  => $this->translate('Show dates in image view'),
-			'type'  => 'checkbox',
+			'key'  => 'showDateInViewer',
+			'name' => $this->translate('Show dates in image view'),
+			'type' => 'checkbox',
 			'value' => $params['showDateInViewer'],
 		);
 		$settings[] = array(
-			'key'   => 'showSize',
-			'name'  => $this->translate('Show album sizes'),
-			'type'  => 'checkbox',
+			'key'  => 'showSize',
+			'name' => $this->translate('Show album sizes'),
+			'type' => 'checkbox',
 			'value' => $params['showSize'],
 		);
 		$settings[] = array(
-			'key'   => 'showViewCount',
-			'name'  => $this->translate('Show view counts'),
-			'type'  => 'checkbox',
+			'key'  => 'showViewCount',
+			'name' => $this->translate('Show view counts'),
+			'type' => 'checkbox',
 			'value' => $params['showViewCount'],
 		);
 		$settings[] = array(
-			'key'     => 'thumbTitle',
-			'name'    => $this->translate('Mouseover on thumbnails'),
-			'type'    => 'single-select',
+			'key'  => 'thumbTitle',
+			'name' => $this->translate('Mouseover on thumbnails'),
+			'type' => 'single-select',
 			'choices' => array(
 				'none'          => $this->translate('None'),
 				'title'         => $this->translate('Title'),
@@ -139,7 +141,7 @@ class HybridTheme extends GalleryTheme {
 				'titledate'     => $this->translate('Title (Date)'),
 				'titledatetime' => $this->translate('Title (Date/Time)'),
 			),
-			'value'   => $params['thumbTitle'],
+			'value' => $params['thumbTitle'],
 		);
 
 		return array(null, $settings, $params);
@@ -248,10 +250,13 @@ class HybridTheme extends GalleryTheme {
 				// Malicious URL.. renderId not for this item
 				return array(GalleryCoreApi::error(ERROR_MISSING_OBJECT), null);
 			}
-			$template->setVariable('theme', array(
-				'item'  => (array)$item,
-				'image' => (array)$image,
-			));
+			$template->setVariable(
+				'theme',
+				array(
+					'item'  => (array)$item,
+					'image' => (array)$image,
+				)
+			);
 
 			return array(null, 'render.tpl');
 		}
@@ -306,7 +311,7 @@ class HybridTheme extends GalleryTheme {
 			}
 		}
 		$redirect = array(
-			'view'   => 'core.ShowItem',
+			'view' => 'core.ShowItem',
 			'itemId' => $parent->getId(),
 		);
 
@@ -480,8 +485,8 @@ class HybridTheme extends GalleryTheme {
 						return array($ret, null, null);
 					}
 				}
-				$image                      = (array)$image;
-				$children[$i]['image']      = $image;
+				$image                 = (array)$image;
+				$children[$i]['image'] = $image;
 				$children[$i]['imageIndex'] = count($imageWidths);
 
 				if (GalleryUtilities::isExactlyA($child, 'GalleryPhotoItem')

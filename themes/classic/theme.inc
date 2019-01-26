@@ -93,24 +93,24 @@ class ClassicTheme extends GalleryTheme {
 
 		// Add in our custom settings
 		$settings[] = array(
-			'key'   => 'showSubalbums',
-			'name'  => $this->translate('Show subalbum links'),
-			'type'  => 'checkbox',
+			'key'  => 'showSubalbums',
+			'name' => $this->translate('Show subalbum links'),
+			'type' => 'checkbox',
 			'value' => $params['showSubalbums'],
 		);
 		$settings[] = array(
-			'key'        => 'subalbumDepth',
-			'name'       => $this->translate('Depth of subalbums links (0=no limit)'),
-			'type'       => 'text-field',
+			'key'  => 'subalbumDepth',
+			'name' => $this->translate('Depth of subalbums links (0=no limit)'),
+			'type' => 'text-field',
 			'typeParams' => array(
 				'size' => 2,
 			),
-			'value'      => $params['subalbumDepth'],
+			'value' => $params['subalbumDepth'],
 		);
 		$settings[] = array(
-			'key'   => 'subalbumSort',
-			'name'  => $this->translate('Show subalbums by sort order of each album (affects performance)'),
-			'type'  => 'checkbox',
+			'key'  => 'subalbumSort',
+			'name' => $this->translate('Show subalbums by sort order of each album (affects performance)'),
+			'type' => 'checkbox',
 			'value' => $params['subalbumSort'],
 		);
 
