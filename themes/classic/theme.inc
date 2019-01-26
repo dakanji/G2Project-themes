@@ -34,20 +34,20 @@ class ClassicTheme extends GalleryTheme {
 		$this->setName($gallery->i18n('Classic'));
 		$this->setDescription($gallery->i18n('Classic Gallery2 root album look and feel'));
 		$this->setVersion('1.1.6');
-		$this->setRequiredCoreApi(array( 7, 27 ));
-		$this->setRequiredThemeApi(array( 2, 4 ));
+		$this->setRequiredCoreApi(array(7, 27));
+		$this->setRequiredThemeApi(array(2, 4));
 		$this->setStandardSettings(
 			array(
-				'rows' => 10,
-				'columns' => 1,
-				'showImageOwner' => 0,
-				'showAlbumOwner' => 1,
-				'albumFrame' => '',
-				'itemFrame' => '',
-				'photoFrame' => '',
+				'rows'            => 10,
+				'columns'         => 1,
+				'showImageOwner'  => 0,
+				'showAlbumOwner'  => 1,
+				'albumFrame'      => '',
+				'itemFrame'       => '',
+				'photoFrame'      => '',
 				'showMicroThumbs' => 0,
-				'colorpack' => '',
-				'sidebarBlocks' => serialize(
+				'colorpack'       => '',
+				'sidebarBlocks'   => serialize(
 					array(
 						array(
 							'search.SearchBlock',
@@ -61,22 +61,22 @@ class ClassicTheme extends GalleryTheme {
 								'useDropdown' => false,
 							),
 						),
-						array( 'core.PeerList', array() ),
-						array( 'imageblock.ImageBlock', array() ),
+						array('core.PeerList', array()),
+						array('imageblock.ImageBlock', array()),
 					)
 				),
 				'albumBlocks' => serialize(
-					array( array( 'comment.ViewComments', array() ) )
+					array(array('comment.ViewComments', array()))
 				),
 				'photoBlocks' => serialize(
 					array(
-						array( 'exif.ExifInfo', array() ),
-						array( 'comment.ViewComments', array() ),
+						array('exif.ExifInfo', array()),
+						array('comment.ViewComments', array()),
 					)
 				),
 				'showSubalbums' => 1,
 				'subalbumDepth' => 0,
-				'subalbumSort' => 0,
+				'subalbumSort'  => 0,
 			)
 		);
 	}
@@ -88,7 +88,7 @@ class ClassicTheme extends GalleryTheme {
 		list($ret, $settings, $params) = parent::getSettings($itemId);
 
 		if ($ret) {
-			return array( $ret, null, null );
+			return array($ret, null, null);
 		}
 
 		// Add in our custom settings
@@ -99,9 +99,9 @@ class ClassicTheme extends GalleryTheme {
 			'value' => $params['showSubalbums'],
 		);
 		$settings[] = array(
-			'key'   => 'subalbumDepth',
-			'name'  => $this->translate('Depth of subalbums links (0=no limit)'),
-			'type'  => 'text-field',
+			'key'        => 'subalbumDepth',
+			'name'       => $this->translate('Depth of subalbums links (0=no limit)'),
+			'type'       => 'text-field',
 			'typeParams' => array(
 				'size' => 2,
 			),
@@ -114,7 +114,7 @@ class ClassicTheme extends GalleryTheme {
 			'value' => $params['subalbumSort'],
 		);
 
-		return array( null, $settings, $params );
+		return array(null, $settings, $params);
 	}
 
 	/**
@@ -156,7 +156,7 @@ class ClassicTheme extends GalleryTheme {
 		);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 
 		// Add in our extra stuff
@@ -176,13 +176,13 @@ class ClassicTheme extends GalleryTheme {
 				);
 
 				if ($ret) {
-					return array( $ret, null );
+					return array($ret, null);
 				}
 			}
 		}
 
 		// Add our header and styles
-		return array( null, 'theme.tpl' );
+		return array(null, 'theme.tpl');
 	}
 
 	/**
@@ -206,10 +206,10 @@ class ClassicTheme extends GalleryTheme {
 		$ret = $this->loadCommonTemplateData($template, $item, $params, $dataTypes);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 
-		return array( null, 'theme.tpl' );
+		return array(null, 'theme.tpl');
 	}
 
 	/**
@@ -220,14 +220,14 @@ class ClassicTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array( 'parents', 'systemLinks' )
+			array('parents', 'systemLinks')
 		);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 
-		return array( null, 'theme.tpl' );
+		return array(null, 'theme.tpl');
 	}
 
 	/**
@@ -238,21 +238,21 @@ class ClassicTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array( 'parents', 'systemLinks' )
+			array('parents', 'systemLinks')
 		);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 
-		return array( null, 'theme.tpl' );
+		return array(null, 'theme.tpl');
 	}
 
 	/**
 	 * @see GalleryTheme::showErrorPage
 	 */
 	public function showErrorPage(&$template) {
-		return array( null, 'error.tpl' );
+		return array(null, 'error.tpl');
 	}
 
 	/**
@@ -263,14 +263,14 @@ class ClassicTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array( 'parents', 'systemLinks' )
+			array('parents', 'systemLinks')
 		);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 
-		return array( null, 'theme.tpl' );
+		return array(null, 'theme.tpl');
 	}
 
 	/**
@@ -355,7 +355,7 @@ class ClassicTheme extends GalleryTheme {
 			foreach ($subAlbums as $subAlbum) {
 				$id                    = $subAlbum->getId();
 				$treeList[$branchId][] = array(
-					'id' => $id,
+					'id'    => $id,
 					'depth' => $depth - 1,
 				);
 				$treeItems[$id]        = (array)$subAlbum;

@@ -33,11 +33,11 @@ class TileTheme extends GalleryTheme {
 		$this->setName($gallery->i18n('Tile'));
 		$this->setDescription($gallery->i18n('Tile view of background image and image thumbnails'));
 		$this->setVersion('1.0.10');
-		$this->setRequiredCoreApi(array( 7, 27 ));
-		$this->setRequiredThemeApi(array( 2, 5 ));
+		$this->setRequiredCoreApi(array(7, 27));
+		$this->setRequiredThemeApi(array(2, 5));
 		$this->setStandardSettings(
 			array(
-				'colorpack' => '',
+				'colorpack'     => '',
 				'sidebarBlocks' => serialize(
 					array(
 						array(
@@ -52,8 +52,8 @@ class TileTheme extends GalleryTheme {
 								'useDropdown' => false,
 							),
 						),
-						array( 'core.PeerList', array() ),
-						array( 'imageblock.ImageBlock', array() ),
+						array('core.PeerList', array()),
+						array('imageblock.ImageBlock', array()),
 					)
 				),
 			)
@@ -61,7 +61,7 @@ class TileTheme extends GalleryTheme {
 	}
 
 	public function _setDefaultParameters(&$params) {
-		foreach (array( 'backgroundId', 'rows', 'cols', 'cellWidth', 'cellHeight' ) as $key) {
+		foreach (array('backgroundId', 'rows', 'cols', 'cellWidth', 'cellHeight') as $key) {
 			if (!isset($params[$key])) {
 				$params[$key] = '0';
 			}
@@ -77,12 +77,12 @@ class TileTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array( 'parents', 'systemLinks', 'itemLinks' ),
+			array('parents', 'systemLinks', 'itemLinks'),
 			$childIds
 		);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 		$theme =& $template->getVariableByReference('theme');
 
@@ -91,7 +91,7 @@ class TileTheme extends GalleryTheme {
 			list($ret, $bgImage) = GalleryCoreApi::loadEntitiesById($params['backgroundId'], 'GalleryEntity');
 
 			if ($ret) {
-				return array( $ret, null );
+				return array($ret, null);
 			}
 			$params['bgSerialNumber'] = $bgImage->getSerialNumber();
 		}
@@ -120,7 +120,7 @@ class TileTheme extends GalleryTheme {
 		list($ret, $imageWidths, $imageHeights) = $this->_buildItemList($childIds, $theme['children']);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 		$itemMap = array();
 
@@ -138,7 +138,7 @@ class TileTheme extends GalleryTheme {
 			$template->head('themes/tile/templates/header.tpl');
 		}
 
-		return array( null, 'theme.tpl' );
+		return array(null, 'theme.tpl');
 	}
 
 	/**
@@ -151,44 +151,44 @@ class TileTheme extends GalleryTheme {
 			// Render this item
 			list($ret, $image) = GalleryCoreApi::loadEntitiesById(
 				$renderId,
-				array( 'GalleryDataItem', 'GalleryDerivative' )
+				array('GalleryDataItem', 'GalleryDerivative')
 			);
 
 			if ($ret) {
-				return array( $ret, null );
+				return array($ret, null);
 			}
 
 			if ($renderId != ($itemId = $item->getId()) && $image->getParentId() != $itemId) {
 				// Malicious URL.. renderId not for this item
-				return array( GalleryCoreApi::error(ERROR_MISSING_OBJECT), null );
+				return array(GalleryCoreApi::error(ERROR_MISSING_OBJECT), null);
 			}
 			$template->setVariable(
 				'theme',
 				array(
-					'item' => (array)$item,
+					'item'  => (array)$item,
 					'image' => (array)$image,
 				)
 			);
 
-			return array( null, 'render.tpl' );
+			return array(null, 'render.tpl');
 		}
 
 		// Otherwise, load the parent with initial view of this item
 		list($ret, $parent) = GalleryCoreApi::loadEntitiesById($item->getParentId(), 'GalleryItem');
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 		list($ret, $childIds) = GalleryCoreApi::fetchChildItemIds($parent);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 
 		list($ret, $tplFile) = $this->showAlbumPage($template, $parent, $params, $childIds);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 		$theme =& $template->getVariableByReference('theme');
 
@@ -204,7 +204,7 @@ class TileTheme extends GalleryTheme {
 			}
 		}
 
-		return array( null, $tplFile );
+		return array(null, $tplFile);
 	}
 
 	/**
@@ -215,14 +215,14 @@ class TileTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array( 'parents', 'systemLinks' )
+			array('parents', 'systemLinks')
 		);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 
-		return array( null, 'theme.tpl' );
+		return array(null, 'theme.tpl');
 	}
 
 	/**
@@ -233,21 +233,21 @@ class TileTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array( 'parents', 'systemLinks' )
+			array('parents', 'systemLinks')
 		);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 
-		return array( null, 'theme.tpl' );
+		return array(null, 'theme.tpl');
 	}
 
 	/**
 	 * @see GalleryTheme::showErrorPage
 	 */
 	public function showErrorPage(&$template) {
-		return array( null, 'error.tpl' );
+		return array(null, 'error.tpl');
 	}
 
 	/**
@@ -258,14 +258,14 @@ class TileTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array( 'parents', 'systemLinks' )
+			array('parents', 'systemLinks')
 		);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 
-		return array( null, 'theme.tpl' );
+		return array(null, 'theme.tpl');
 	}
 
 	public function _buildItemList($childIds, &$children) {
@@ -275,27 +275,27 @@ class TileTheme extends GalleryTheme {
 			$ret = GalleryCoreApi::studyPermissions($childIds);
 
 			if ($ret) {
-				return array( $ret, null, null );
+				return array($ret, null, null);
 			}
 			list($ret, $childItems) = GalleryCoreApi::loadEntitiesById($childIds, 'GalleryItem');
 
 			if ($ret) {
-				return array( $ret, null, null );
+				return array($ret, null, null);
 			}
 			list($ret, $preferredFullImages) = GalleryCoreApi::fetchPreferredsByItemIds($childIds);
 
 			if ($ret) {
-				return array( $ret, null, null );
+				return array($ret, null, null);
 			}
 			list($ret, $resizedImages) = GalleryCoreApi::fetchResizesByItemIds($childIds);
 
 			if ($ret) {
-				return array( $ret, null, null );
+				return array($ret, null, null);
 			}
 			list($ret, $thumbnails) = GalleryCoreApi::fetchThumbnailsByItemIds($childIds);
 
 			if ($ret) {
-				return array( $ret, null, null );
+				return array($ret, null, null);
 			}
 		}
 		$i = -1;
@@ -309,7 +309,7 @@ class TileTheme extends GalleryTheme {
 					list($ret, $thumbnails[$childId]) = GalleryCoreApi::rebuildDerivativeCache($thumbnails[$childId]->getId());
 
 					if ($ret) {
-						return array( $ret, null, null );
+						return array($ret, null, null);
 					}
 				}
 				$children[$i]['thumbnail'] = (array)$thumbnails[$childId];
@@ -322,7 +322,7 @@ class TileTheme extends GalleryTheme {
 			list($ret, $permissions) = GalleryCoreApi::getPermissions($childId);
 
 			if ($ret) {
-				return array( $ret, null, null );
+				return array($ret, null, null);
 			}
 
 			$images = array();
@@ -356,7 +356,7 @@ class TileTheme extends GalleryTheme {
 					list($ret, $image) = GalleryCoreApi::rebuildDerivativeCache($image->getId());
 
 					if ($ret) {
-						return array( $ret, null, null );
+						return array($ret, null, null);
 					}
 				}
 				$image                      = (array)$image;
@@ -377,7 +377,7 @@ class TileTheme extends GalleryTheme {
 			}
 		}
 
-		return array( null, $imageWidths, $imageHeights );
+		return array(null, $imageWidths, $imageHeights);
 	}
 
 	/**
@@ -407,7 +407,7 @@ class TileTheme extends GalleryTheme {
 
 		if (!isset($itemId)) {
 			// Site admin settings -- we have none.
-			return array( null, null );
+			return array(null, null);
 		}
 
 		/*
@@ -417,17 +417,17 @@ class TileTheme extends GalleryTheme {
 		list($ret, $item) = GalleryCoreApi::loadEntitiesById($itemId, 'GalleryItem');
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 
 		if (!GalleryUtilities::isA($item, 'GalleryAlbumItem')) {
 			// Can't configure for dynamic album
-			return array( null, null );
+			return array(null, null);
 		}
 		list($ret, $params) = $this->fetchParameters($itemId);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 		$this->_setDefaultParameters($params);
 
@@ -438,16 +438,16 @@ class TileTheme extends GalleryTheme {
 		list($ret, $childIds) = GalleryCoreApi::fetchChildItemIds($item);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 
 		list($ret, $tmp) = $this->showAlbumPage($template, $item, $params, $childIds, false);
 
 		if ($ret) {
-			return array( $ret, null );
+			return array($ret, null);
 		}
 
-		return array( null, 'themes/tile/templates/edit.tpl' );
+		return array(null, 'themes/tile/templates/edit.tpl');
 	}
 
 	/**
@@ -456,19 +456,19 @@ class TileTheme extends GalleryTheme {
 	public function handleSettingsRequest($form, $itemId = null) {
 		if (!isset($itemId)) {
 			// No site admin settings
-			return array( null, array(), '' );
+			return array(null, array(), '');
 		}
 		list($ret, $item) = GalleryCoreApi::loadEntitiesById($itemId, 'GalleryItem');
 
 		if ($ret) {
-			return array( $ret, null, null );
+			return array($ret, null, null);
 		}
 
 		$status = null;
 		$error  = array();
 
 		if (isset($form['action']['save'])) {
-			foreach (array( 'backgroundId', 'rows', 'cols', 'cellWidth', 'cellHeight' ) as $key) {
+			foreach (array('backgroundId', 'rows', 'cols', 'cellWidth', 'cellHeight') as $key) {
 				if (isset($form[$key])) {
 					$ret = GalleryCoreApi::setPluginParameter(
 						'theme',
@@ -479,7 +479,7 @@ class TileTheme extends GalleryTheme {
 					);
 
 					if ($ret) {
-						return array( $ret, null, null );
+						return array($ret, null, null);
 					}
 				}
 			}
@@ -504,11 +504,11 @@ class TileTheme extends GalleryTheme {
 			);
 
 			if ($ret) {
-				return array( $ret, null, null );
+				return array($ret, null, null);
 			}
 			$status = $this->translate('Successfully saved theme settings');
 		} // else $form['action']['undo']
 
-		return array( null, $error, $status );
+		return array(null, $error, $status);
 	}
 }
