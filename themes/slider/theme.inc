@@ -36,12 +36,12 @@ class SliderTheme extends GalleryTheme {
 			$gallery->i18n('Image viewer/slideshow; subalbums/other items not shown')
 		);
 		$this->setVersion('1.0.11');
-		$this->setRequiredCoreApi(array(7, 36));
-		$this->setRequiredThemeApi(array(2, 5));
+		$this->setRequiredCoreApi(array( 7, 36 ));
+		$this->setRequiredThemeApi(array( 2, 5 ));
 		$this->setStandardSettings(
 			array(
-				'colorpack'      => '',
-				'sidebarBlocks'  => serialize(
+				'colorpack' => '',
+				'sidebarBlocks' => serialize(
 					array(
 						array(
 							'search.SearchBlock',
@@ -49,7 +49,7 @@ class SliderTheme extends GalleryTheme {
 								'showAdvancedLink' => true,
 							),
 						),
-						array('imageblock.ImageBlock', array()),
+						array( 'imageblock.ImageBlock', array() ),
 					)
 				),
 				'enableImageMap' => 0,
@@ -64,19 +64,19 @@ class SliderTheme extends GalleryTheme {
 		list($ret, $settings, $params) = parent::getSettings($itemId);
 
 		if ($ret) {
-			return array($ret, null, null);
+			return array( $ret, null, null );
 		}
 
 		$settings[] = array(
-			'key'  => 'enableImageMap',
-			'name' => $this->translate(
+			'key'   => 'enableImageMap',
+			'name'  => $this->translate(
 				'Enable prev/next navigation by clicking in the left/right half of the image'
 			),
-			'type' => 'checkbox',
+			'type'  => 'checkbox',
 			'value' => $params['enableImageMap'],
 		);
 
-		return array(null, $settings, $params);
+		return array( null, $settings, $params );
 	}
 
 	/**
@@ -87,19 +87,19 @@ class SliderTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array('parents', 'systemLinks', 'itemLinks', 'childItemLinksDetailed'),
+			array( 'parents', 'systemLinks', 'itemLinks', 'childItemLinksDetailed' ),
 			$childIds
 		);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 		$theme =& $template->getVariableByReference('theme');
 
 		list($ret, $imageWidths, $imageHeights) = $this->_buildItemList($childIds, $theme['children']);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
 		$theme['imageWidths']  = implode(',', $imageWidths);
@@ -108,7 +108,7 @@ class SliderTheme extends GalleryTheme {
 
 		$template->head('themes/slider/templates/header.tpl');
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 
 	/**
@@ -121,44 +121,44 @@ class SliderTheme extends GalleryTheme {
 			// Render this item
 			list($ret, $image) = GalleryCoreApi::loadEntitiesById(
 				$renderId,
-				array('GalleryDataItem', 'GalleryDerivative')
+				array( 'GalleryDataItem', 'GalleryDerivative' )
 			);
 
 			if ($ret) {
-				return array($ret, null);
+				return array( $ret, null );
 			}
 
 			if ($renderId != ($itemId = $item->getId()) && $image->getParentId() != $itemId) {
 				// Malicious URL.. renderId not for this item
-				return array(GalleryCoreApi::error(ERROR_MISSING_OBJECT), null);
+				return array( GalleryCoreApi::error(ERROR_MISSING_OBJECT), null );
 			}
 			$template->setVariable(
 				'theme',
 				array(
-					'item'  => (array)$item,
+					'item' => (array)$item,
 					'image' => (array)$image,
 				)
 			);
 
-			return array(null, 'render.tpl');
+			return array( null, 'render.tpl' );
 		}
 
 		// Otherwise, load the parent with initial view of this item
 		list($ret, $parent) = GalleryCoreApi::loadEntitiesById($item->getParentId(), 'GalleryItem');
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 		list($ret, $childIds) = GalleryCoreApi::fetchChildItemIds($parent);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
 		list($ret, $tplFile) = $this->showAlbumPage($template, $parent, $params, $childIds);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 		$theme =& $template->getVariableByReference('theme');
 
@@ -172,7 +172,7 @@ class SliderTheme extends GalleryTheme {
 			}
 		}
 
-		return array(null, $tplFile);
+		return array( null, $tplFile );
 	}
 
 	/**
@@ -183,14 +183,14 @@ class SliderTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array('parents', 'systemLinks')
+			array( 'parents', 'systemLinks' )
 		);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 
 	/**
@@ -201,21 +201,21 @@ class SliderTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array('parents', 'systemLinks')
+			array( 'parents', 'systemLinks' )
 		);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 
 	/**
 	 * @see GalleryTheme::showErrorPage
 	 */
 	public function showErrorPage(&$template) {
-		return array(null, 'error.tpl');
+		return array( null, 'error.tpl' );
 	}
 
 	/**
@@ -226,14 +226,14 @@ class SliderTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array('parents', 'systemLinks')
+			array( 'parents', 'systemLinks' )
 		);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 
 	/**
@@ -247,27 +247,27 @@ class SliderTheme extends GalleryTheme {
 			$ret = GalleryCoreApi::studyPermissions($childIds);
 
 			if ($ret) {
-				return array($ret, null, null);
+				return array( $ret, null, null );
 			}
 			list($ret, $childItems) = GalleryCoreApi::loadEntitiesById($childIds, 'GalleryItem');
 
 			if ($ret) {
-				return array($ret, null, null);
+				return array( $ret, null, null );
 			}
 			list($ret, $preferredFullImages) = GalleryCoreApi::fetchPreferredsByItemIds($childIds);
 
 			if ($ret) {
-				return array($ret, null, null);
+				return array( $ret, null, null );
 			}
 			list($ret, $resizedImages) = GalleryCoreApi::fetchResizesByItemIds($childIds);
 
 			if ($ret) {
-				return array($ret, null, null);
+				return array( $ret, null, null );
 			}
 			list($ret, $thumbnails) = GalleryCoreApi::fetchThumbnailsByItemIds($childIds);
 
 			if ($ret) {
-				return array($ret, null, null);
+				return array( $ret, null, null );
 			}
 		}
 		$i = -1;
@@ -285,7 +285,7 @@ class SliderTheme extends GalleryTheme {
 					list($ret, $thumbnails[$childId]) = GalleryCoreApi::rebuildDerivativeCache($thumbnails[$childId]->getId());
 
 					if ($ret) {
-						return array($ret, null, null);
+						return array( $ret, null, null );
 					}
 				}
 				$children[$i]['thumbnail'] = (array)$thumbnails[$childId];
@@ -294,7 +294,7 @@ class SliderTheme extends GalleryTheme {
 			list($ret, $permissions) = GalleryCoreApi::getPermissions($childId);
 
 			if ($ret) {
-				return array($ret, null, null);
+				return array( $ret, null, null );
 			}
 
 			$images = array();
@@ -328,11 +328,11 @@ class SliderTheme extends GalleryTheme {
 					list($ret, $image) = GalleryCoreApi::rebuildDerivativeCache($image->getId());
 
 					if ($ret) {
-						return array($ret, null, null);
+						return array( $ret, null, null );
 					}
 				}
-				$image                 = (array)$image;
-				$children[$i]['image'] = $image;
+				$image                      = (array)$image;
+				$children[$i]['image']      = $image;
 				$children[$i]['imageIndex'] = count($imageWidths);
 
 				if (GalleryUtilities::isExactlyA($child, 'GalleryPhotoItem')
@@ -349,6 +349,6 @@ class SliderTheme extends GalleryTheme {
 			}
 		}
 
-		return array(null, $imageWidths, $imageHeights);
+		return array( null, $imageWidths, $imageHeights );
 	}
 }

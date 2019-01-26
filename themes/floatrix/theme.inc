@@ -33,22 +33,22 @@ class FloatrixTheme extends GalleryTheme {
 		$this->setName($gallery->i18n('Floatrix'));
 		$this->setDescription($gallery->i18n('Variable column theme based on Matrix'));
 		$this->setVersion('1.0.8');
-		$this->setRequiredCoreApi(array(7, 20));
-		$this->setRequiredThemeApi(array(2, 5));
+		$this->setRequiredCoreApi(array( 7, 20 ));
+		$this->setRequiredThemeApi(array( 2, 5 ));
 		$this->setStandardSettings(
 			array(
-				'perPage'         => 12,
-				'columnWidth'     => 200,
-				'rowHeight'       => 300,
-				'showImageOwner'  => 0,
-				'showAlbumOwner'  => 1,
-				'albumFrame'      => '',
-				'itemFrame'       => '',
-				'photoFrame'      => '',
-				'colorpack'       => '',
+				'perPage' => 12,
+				'columnWidth' => 200,
+				'rowHeight' => 300,
+				'showImageOwner' => 0,
+				'showAlbumOwner' => 1,
+				'albumFrame' => '',
+				'itemFrame' => '',
+				'photoFrame' => '',
+				'colorpack' => '',
 				'showMicroThumbs' => 0,
-				'dynamicLinks'    => 'browse',
-				'sidebarBlocks'   => serialize(
+				'dynamicLinks' => 'browse',
+				'sidebarBlocks' => serialize(
 					array(
 						array(
 							'core.ItemLinks',
@@ -56,19 +56,19 @@ class FloatrixTheme extends GalleryTheme {
 								'useDropdown' => false,
 							),
 						),
-						array('core.PeerList', array()),
-						array('imageblock.ImageBlock', array()),
+						array( 'core.PeerList', array() ),
+						array( 'imageblock.ImageBlock', array() ),
 					)
 				),
-				'albumBlocks'     => serialize(
+				'albumBlocks' => serialize(
 					array(
-						array('comment.ViewComments', array()),
+						array( 'comment.ViewComments', array() ),
 					)
 				),
-				'photoBlocks'     => serialize(
+				'photoBlocks' => serialize(
 					array(
-						array('exif.ExifInfo', array()),
-						array('comment.ViewComments', array()),
+						array( 'exif.ExifInfo', array() ),
+						array( 'comment.ViewComments', array() ),
 					)
 				),
 			)
@@ -118,12 +118,12 @@ class FloatrixTheme extends GalleryTheme {
 		);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 		$ret = $this->preloadBlock($template, 'search.SearchBlock');
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
 		// Check for JavaScript warning flag
@@ -133,7 +133,7 @@ class FloatrixTheme extends GalleryTheme {
 
 		$this->_splitItemLinks($template);
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 
 	/**
@@ -157,12 +157,12 @@ class FloatrixTheme extends GalleryTheme {
 		$ret = $this->loadCommonTemplateData($template, $item, $params, $dataTypes);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 		$ret = $this->preloadBlock($template, 'search.SearchBlock');
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
 		// Check for JavaScript warning flag
@@ -172,7 +172,7 @@ class FloatrixTheme extends GalleryTheme {
 
 		$this->_splitItemLinks($template);
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 
 	/**
@@ -181,12 +181,12 @@ class FloatrixTheme extends GalleryTheme {
 	public function _splitItemLinks(&$template) {
 		$theme              =& $template->getVariableByReference('theme');
 		$userViews          = array(
-			'slideshow.Slideshow'             => true,
+			'slideshow.Slideshow' => true,
 			'slideshowapplet.SlideshowApplet' => true,
-			'comment.AddComment'              => true,
-			'comment.ShowAllComments'         => true,
-			'ecard.SendEcard'                 => true,
-			'rss.SimpleRender'                => true,
+			'comment.AddComment' => true,
+			'comment.ShowAllComments' => true,
+			'ecard.SendEcard' => true,
+			'rss.SimpleRender' => true,
 		);
 		$theme['userLinks'] = array();
 
@@ -206,11 +206,11 @@ class FloatrixTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array('parents', 'systemLinks')
+			array( 'parents', 'systemLinks' )
 		);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
 		// Check for JavaScript warning flag
@@ -218,7 +218,7 @@ class FloatrixTheme extends GalleryTheme {
 			$template->setVariable('jsWarning', true);
 		}
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 
 	/**
@@ -229,21 +229,21 @@ class FloatrixTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array('parents', 'systemLinks')
+			array( 'parents', 'systemLinks' )
 		);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 
 	/**
 	 * @see GalleryTheme::showErrorPage
 	 */
 	public function showErrorPage(&$template) {
-		return array(null, 'error.tpl');
+		return array( null, 'error.tpl' );
 	}
 
 	/**
@@ -254,13 +254,13 @@ class FloatrixTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array('parents', 'systemLinks')
+			array( 'parents', 'systemLinks' )
 		);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 }

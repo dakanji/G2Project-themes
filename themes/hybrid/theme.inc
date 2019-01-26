@@ -33,8 +33,8 @@ class HybridTheme extends GalleryTheme {
 		$this->setName($gallery->i18n('Hybrid'));
 		$this->setDescription($gallery->i18n('Combined album/image/slideshow dynamic view'));
 		$this->setVersion('1.1.10');
-		$this->setRequiredCoreApi(array(7, 36));
-		$this->setRequiredThemeApi(array(2, 5));
+		$this->setRequiredCoreApi(array( 7, 36 ));
+		$this->setRequiredThemeApi(array( 2, 5 ));
 		$this->setStandardSettings(
 			array(
 				'rows' => 30,
@@ -56,17 +56,17 @@ class HybridTheme extends GalleryTheme {
 								'useDropdown' => false,
 							),
 						),
-						array('core.PeerList', array()),
-						array('imageblock.ImageBlock', array()),
+						array( 'core.PeerList', array() ),
+						array( 'imageblock.ImageBlock', array() ),
 					)
 				),
 				'albumBlocks' => serialize(
-					array(array('comment.ViewComments', array()))
+					array( array( 'comment.ViewComments', array() ) )
 				),
 				'photoBlocks' => serialize(
 					array(
-						array('exif.ExifInfo', array()),
-						array('comment.ViewComments', array()),
+						array( 'exif.ExifInfo', array() ),
+						array( 'comment.ViewComments', array() ),
 					)
 				),
 				'showText' => 1,
@@ -89,62 +89,62 @@ class HybridTheme extends GalleryTheme {
 		list($ret, $settings, $params) = parent::getSettings($itemId);
 
 		if ($ret) {
-			return array($ret, null, null);
+			return array( $ret, null, null );
 		}
 
 		// Add in our custom settings
 		$settings[] = array(
-			'key'  => 'showText',
-			'name' => $this->translate('Show text with thumbnails'),
-			'type' => 'checkbox',
+			'key'   => 'showText',
+			'name'  => $this->translate('Show text with thumbnails'),
+			'type'  => 'checkbox',
 			'value' => $params['showText'],
 		);
 		$settings[] = array(
-			'key'  => 'showAlbumDate',
-			'name' => $this->translate('Show dates for albums'),
-			'type' => 'checkbox',
+			'key'   => 'showAlbumDate',
+			'name'  => $this->translate('Show dates for albums'),
+			'type'  => 'checkbox',
 			'value' => $params['showAlbumDate'],
 		);
 		$settings[] = array(
-			'key'  => 'showImageDate',
-			'name' => $this->translate('Show dates with thumbnails'),
-			'type' => 'checkbox',
+			'key'   => 'showImageDate',
+			'name'  => $this->translate('Show dates with thumbnails'),
+			'type'  => 'checkbox',
 			'value' => $params['showImageDate'],
 		);
 		$settings[] = array(
-			'key'  => 'showDateInViewer',
-			'name' => $this->translate('Show dates in image view'),
-			'type' => 'checkbox',
+			'key'   => 'showDateInViewer',
+			'name'  => $this->translate('Show dates in image view'),
+			'type'  => 'checkbox',
 			'value' => $params['showDateInViewer'],
 		);
 		$settings[] = array(
-			'key'  => 'showSize',
-			'name' => $this->translate('Show album sizes'),
-			'type' => 'checkbox',
+			'key'   => 'showSize',
+			'name'  => $this->translate('Show album sizes'),
+			'type'  => 'checkbox',
 			'value' => $params['showSize'],
 		);
 		$settings[] = array(
-			'key'  => 'showViewCount',
-			'name' => $this->translate('Show view counts'),
-			'type' => 'checkbox',
+			'key'   => 'showViewCount',
+			'name'  => $this->translate('Show view counts'),
+			'type'  => 'checkbox',
 			'value' => $params['showViewCount'],
 		);
 		$settings[] = array(
-			'key'  => 'thumbTitle',
-			'name' => $this->translate('Mouseover on thumbnails'),
-			'type' => 'single-select',
+			'key'     => 'thumbTitle',
+			'name'    => $this->translate('Mouseover on thumbnails'),
+			'type'    => 'single-select',
 			'choices' => array(
-				'none'          => $this->translate('None'),
-				'title'         => $this->translate('Title'),
-				'date'          => $this->translate('Date'),
-				'datetime'      => $this->translate('Date/Time'),
-				'titledate'     => $this->translate('Title (Date)'),
+				'none'  => $this->translate('None'),
+				'title' => $this->translate('Title'),
+				'date'  => $this->translate('Date'),
+				'datetime' => $this->translate('Date/Time'),
+				'titledate' => $this->translate('Title (Date)'),
 				'titledatetime' => $this->translate('Title (Date/Time)'),
 			),
-			'value' => $params['thumbTitle'],
+			'value'   => $params['thumbTitle'],
 		);
 
-		return array(null, $settings, $params);
+		return array( null, $settings, $params );
 	}
 
 	/**
@@ -179,14 +179,14 @@ class HybridTheme extends GalleryTheme {
 		$ret = $this->loadCommonTemplateData($template, $item, $params, $data, $childIds);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 		$theme =& $template->getVariableByReference('theme');
 
 		list($ret, $imageWidths, $imageHeights) = $this->_buildItemList($childIds, $theme['children']);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
 		$theme['imageWidths']    = implode(',', $imageWidths);
@@ -226,7 +226,7 @@ class HybridTheme extends GalleryTheme {
 
 		$template->head('themes/hybrid/templates/header.tpl');
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 
 	/**
@@ -239,26 +239,26 @@ class HybridTheme extends GalleryTheme {
 			// Render this item
 			list($ret, $image) = GalleryCoreApi::loadEntitiesById(
 				$renderId,
-				array('GalleryDataItem', 'GalleryDerivative')
+				array( 'GalleryDataItem', 'GalleryDerivative' )
 			);
 
 			if ($ret) {
-				return array($ret, null);
+				return array( $ret, null );
 			}
 
 			if ($renderId != ($itemId = $item->getId()) && $image->getParentId() != $itemId) {
 				// Malicious URL.. renderId not for this item
-				return array(GalleryCoreApi::error(ERROR_MISSING_OBJECT), null);
+				return array( GalleryCoreApi::error(ERROR_MISSING_OBJECT), null );
 			}
 			$template->setVariable(
 				'theme',
 				array(
-					'item'  => (array)$item,
+					'item' => (array)$item,
 					'image' => (array)$image,
 				)
 			);
 
-			return array(null, 'render.tpl');
+			return array( null, 'render.tpl' );
 		}
 
 		if (!empty($detail)) {
@@ -267,17 +267,17 @@ class HybridTheme extends GalleryTheme {
 				$template,
 				$item,
 				$params,
-				array('owner', 'viewCount')
+				array( 'owner', 'viewCount' )
 			);
 
 			if ($ret) {
-				return array($ret, null);
+				return array( $ret, null );
 			}
 			$theme                 =& $template->getVariableByReference('theme');
-			list($ret, $thumbnail) = GalleryCoreApi::fetchThumbnailsByItemIds(array($item->getId()));
+			list($ret, $thumbnail) = GalleryCoreApi::fetchThumbnailsByItemIds(array( $item->getId() ));
 
 			if ($ret) {
-				return array($ret, null);
+				return array( $ret, null );
 			}
 
 			if (!empty($thumbnail)) {
@@ -285,20 +285,20 @@ class HybridTheme extends GalleryTheme {
 			}
 			$template->style('themes/hybrid/theme.css');
 
-			return array(null, 'detail.tpl');
+			return array( null, 'detail.tpl' );
 		}
 
 		// Otherwise, redirect to parent with initial view of this item
 		list($ret, $parent) = GalleryCoreApi::loadEntitiesById($item->getParentId(), 'GalleryItem');
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 		$theme                =& $template->getVariableByReference('theme');
 		list($ret, $childIds) = GalleryCoreApi::fetchChildItemIds($parent, null, null, $theme['actingUserId']);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 		$perPage = $this->getPageSize($params);
 		$page    = 1;
@@ -311,7 +311,7 @@ class HybridTheme extends GalleryTheme {
 			}
 		}
 		$redirect = array(
-			'view' => 'core.ShowItem',
+			'view'   => 'core.ShowItem',
 			'itemId' => $parent->getId(),
 		);
 
@@ -336,14 +336,14 @@ class HybridTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array('parents', 'systemLinks')
+			array( 'parents', 'systemLinks' )
 		);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 
 	/**
@@ -354,21 +354,21 @@ class HybridTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array('parents', 'systemLinks')
+			array( 'parents', 'systemLinks' )
 		);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 
 	/**
 	 * @see GalleryTheme::showErrorPage
 	 */
 	public function showErrorPage(&$template) {
-		return array(null, 'error.tpl');
+		return array( null, 'error.tpl' );
 	}
 
 	/**
@@ -379,14 +379,14 @@ class HybridTheme extends GalleryTheme {
 			$template,
 			$item,
 			$params,
-			array('parents', 'systemLinks')
+			array( 'parents', 'systemLinks' )
 		);
 
 		if ($ret) {
-			return array($ret, null);
+			return array( $ret, null );
 		}
 
-		return array(null, 'theme.tpl');
+		return array( null, 'theme.tpl' );
 	}
 
 	/**
@@ -400,27 +400,27 @@ class HybridTheme extends GalleryTheme {
 			$ret = GalleryCoreApi::studyPermissions($childIds);
 
 			if ($ret) {
-				return array($ret, null, null);
+				return array( $ret, null, null );
 			}
 			list($ret, $childItems) = GalleryCoreApi::loadEntitiesById($childIds, 'GalleryItem');
 
 			if ($ret) {
-				return array($ret, null, null);
+				return array( $ret, null, null );
 			}
 			list($ret, $preferredFullImages) = GalleryCoreApi::fetchPreferredsByItemIds($childIds);
 
 			if ($ret) {
-				return array($ret, null, null);
+				return array( $ret, null, null );
 			}
 			list($ret, $resizedImages) = GalleryCoreApi::fetchResizesByItemIds($childIds);
 
 			if ($ret) {
-				return array($ret, null, null);
+				return array( $ret, null, null );
 			}
 			list($ret, $thumbnails) = GalleryCoreApi::fetchThumbnailsByItemIds($childIds);
 
 			if ($ret) {
-				return array($ret, null, null);
+				return array( $ret, null, null );
 			}
 		}
 		$i = -1;
@@ -434,7 +434,7 @@ class HybridTheme extends GalleryTheme {
 					list($ret, $thumbnails[$childId]) = GalleryCoreApi::rebuildDerivativeCache($thumbnails[$childId]->getId());
 
 					if ($ret) {
-						return array($ret, null, null);
+						return array( $ret, null, null );
 					}
 				}
 				$children[$i]['thumbnail'] = (array)$thumbnails[$childId];
@@ -447,7 +447,7 @@ class HybridTheme extends GalleryTheme {
 			list($ret, $permissions) = GalleryCoreApi::getPermissions($childId);
 
 			if ($ret) {
-				return array($ret, null, null);
+				return array( $ret, null, null );
 			}
 
 			$images = array();
@@ -482,11 +482,11 @@ class HybridTheme extends GalleryTheme {
 					list($ret, $image) = GalleryCoreApi::rebuildDerivativeCache($image->getId());
 
 					if ($ret) {
-						return array($ret, null, null);
+						return array( $ret, null, null );
 					}
 				}
-				$image                 = (array)$image;
-				$children[$i]['image'] = $image;
+				$image                      = (array)$image;
+				$children[$i]['image']      = $image;
 				$children[$i]['imageIndex'] = count($imageWidths);
 
 				if (GalleryUtilities::isExactlyA($child, 'GalleryPhotoItem')
@@ -503,6 +503,6 @@ class HybridTheme extends GalleryTheme {
 			}
 		}
 
-		return array(null, $imageWidths, $imageHeights);
+		return array( null, $imageWidths, $imageHeights );
 	}
 }
