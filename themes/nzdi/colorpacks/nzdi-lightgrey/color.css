@@ -1,0 +1,43 @@
+/* ^PHPCS_CSS_T_OPEN_TAG^ $colorpackName = $gallery->i18n('NZDI Light Grey'); ^PHPCS_CSS_T_CLOSE_TAG^
+ * $Revision: 909 $
+ */
+
+#gallery {
+  color: #000000 !important;
+  background-color: #eee !important;
+  border-color: #3e565f !important;
+  border-top: #3e565f 1px solid !important;
+  border-bottom: #3e565f 1px solid !important;
+  border-left: #3e565f 3px solid !important;
+  border-right: #3e565f 3px solid !important;
+  }
+
+body.gallery { background-color: transparent !important;}
+
+.gcBackground1 { background-color: #ddd !important; }
+.gcBackground2 { background-color: #fefefe !important; }
+
+.gcBorder1 { border-color: #999999 !important; }
+.gcBorder2 { border-color: #9999 !important; }
+
+#gallery select { background-color: #efefef !important; }
+#gallery input { background-color: #efefef !important; }
+#gallery textarea { background-color: #efefef !important; }
+
+.gallery-content {  background: #fefefe !important; }
+
+.gallery-thumb a img, #micro-navigation a img {  background: #eee !important; border-color: #999 !important; }
+.gallery-thumb a:hover img, #micro-navigation a:hover img, img.gallery-photo {  background: #ccc !important; border-color: #3e565f !important; }
+
+#micro-navigation #current-image img {  background: #e3e3e3 !important; border-color: #ff9933 !important; }
+
+.giInfo span.summary, .giDescription-id, .viewCount { color: #999 !important; }
+
+#gsFooter, #photo-info .gallery-content {
+  border-top: #999 1px solid !important;
+  border-bottom: #999 1px solid !important;
+  border-left: #999 2px solid !important;
+  border-right: #999 2px solid !important;
+  }
+
+

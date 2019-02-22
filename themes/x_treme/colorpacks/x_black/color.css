@@ -1,0 +1,164 @@
+/* ^PHPCS_CSS_T_OPEN_TAG^ $colorpackName = $gallery->i18n('X_black (by PedroGilberto.net)'); ^PHPCS_CSS_T_CLOSE_TAG^
+ */
+
+
+#gallery {
+  color: #505050 !important;
+  background-color: #000 !important;
+}
+body.gallery { background-color: #000 !important; }
+
+.gcBackground1 { background-color: #181818 !important; }
+.gcBackground2, .iframeBackground { background-color: #222 !important; }
+
+.gcBorder1 { border-color: #282828 !important; }
+.gcBorder2 { border-color: #000 !important; }
+.gcBorder1Author {border-right: 10px solid #181818 !important;}
+.gcBorder1Top {border-bottom: 1px solid #363636 !important;}
+
+
+#gallery a { color: #767676 !important; }
+#gallery a:hover { color: #8f8f8f !important; }
+#gallery a:active { color: #505050 !important; }
+
+.giSuccess { color: #190 !important; }
+.giWarning { color: #b31 !important; }
+.giError { color: #d14 !important; }
+.giInfo,#gsPages div { color: #888 !important; }
+.block-core-PeerList .current { color: #aaa !important; }
+
+table.gbDataTable th { background-color: #777!important; }
+.gbEven { background-color: #161616 !important; }
+.gbOdd { background-color: #222 !important; }
+
+input.inputTypeSubmit, input.inputTypeButton { background-color: #777 !important; }
+#gallery select { background-color: #aaa !important; }
+
+.giNew, .giUpdated {
+  color: #8f8f8f !important;
+  border-color: #8f8f8f !important;
+}
+
+.giTitle, #gallery h2, #gallery h3, #gallery h4 {
+	color: #606060 !important;
+}
+
+#gallery input { background-color: #ccc !important; }
+
+#gallery textarea:focus { background-color: #d1d1ff !important; }
+
+.giSearchHighlight { color: #0a0; background-color: #777 !important; }
+
+#addCommentForm input { background-color: #888 !important; }
+
+#addCommentForm textarea { background-color: #ccc !important; }
+
+#addCommentForm input.gcBackground1  { background-color: #ccc !important; }
+
+#addCommentForm #subject { background-color: #666 !important; }
+
+#addCommentForm #comment { background-color: #666 !important; }
+
+div.gbTabBar {
+   background-color: #2a2a2a !important; }
+
+div.gbTabBar span {
+   background: url('tab_left.gif') no-repeat left top !important; }
+
+#gallery div.gbTabBar span span {
+	background: url('tab_right.gif') no-repeat right top !important; }
+
+#gallery div.gbTabBar span.giSelected {
+   background-image: url('tab_left_on.gif') !important; }
+
+#gallery div.gbTabBar span.giSelected span {
+	color: #bbb !important;
+	background-image: url('tab_right_on.gif') !important; }
+	
+
+span.bsw_ButtonDisabled {
+  color: #555 !important; }
+
+span.bsw_ButtonEnabled {
+  color: #ccc!important; }
+
+
+
+.gbBlock li {
+	color: #555 !important;
+}
+
+
+#gsSidebar ul span {
+	color: #888 !important;
+}
+
+
+#gallery div.gbTabBar a {
+	color: #777 !important;
+	text-decoration: none!important;
+}
+
+#gallery div.gbTabBar a:hover {
+	color: #f6f6f6 !important;
+}
+
+span.bsw_ButtonDisabled {
+  color: #555 !important;
+}
+
+.NavBorder {
+	border: 0 solid #888 !important;
+	border-top-width: 2px !important;
+}
+
+
+.menuoff {
+	color: #555 !important;
+}
+
+div#menu a,div#menu a:visited {color: #555 !important;}
+
+.helplink a {
+	color: #ffffff !important;
+	background-color: #ccddff !important;
+}
+
+.helplink a:hover {
+	color: #88aadd !important;
+	background-color: #bbccff !important;
+}
+.helplink a:active {
+	color: #6666dd !important;
+}
+
+/*
+*******    ** rating ****    ****
+*/
+.giRatingEmpty {
+	background: transparent url('images/rating/star_r_0.0.gif') no-repeat !important;
+}
+.giRatingEmptyUserYes {
+	background: transparent url('images/rating/star_u_noborder.gif') no-repeat !important;
+}
+.giRatingHalfUserNo {
+	background: transparent url('images/rating/star_r_0.5.gif') no-repeat !important;
+}
+.giRatingHalfUserYes {
+	background: transparent url('images/rating/star_07.gif') no-repeat !important;
+}
+.giRatingFullUserNo {
+	background: transparent url('images/rating/star_r_1.0.gif') no-repeat !important;
+}
+.giRatingFullUserYes {
+	background: transparent url('images/rating/star_u_1.0.gif') no-repeat !important;
+}
+.giRatingAverage {
+	background-color: #777 !important;
+	height: 8px;
+}
+.giRatingAverageContainer {
+	border: 1px solid #6f6f6f !important;
+	height: 8px;
+	width: 80px;
+

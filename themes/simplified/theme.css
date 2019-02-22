@@ -1,0 +1,458 @@
+/* Top NavBar  */
+#gsNavBar {
+	width: 100%;
+}
+#gsNavBar div#gbHomeLink {
+	font-size: 0.8em;
+	margin: 3px;
+	float: left;
+	text-align: left;
+}
+#gsNavBar div.gbSystemLinks {
+	font-size: 0.8em;
+	margin: 3px;
+	text-align: right;
+}
+
+/* Top NavBar BreadCrumb */
+#gbHomeLink div.block-core-BreadCrumb a {
+	padding: 0 0 0 10px;
+	background: url('images/icon_path_separator.gif') no-repeat left;
+}
+
+#gbHomeLink div.block-core-BreadCrumb a.BreadCrumb-1 {
+	padding-left: 3px;
+	background-image: none;
+}
+
+/* Photo/Album Data Header  */
+td#gsHeader {
+	color: #FFFFFF;
+	background-color: #000000;
+}
+/* Browse Album BreadCrumb */
+#gsHeader div.gbBreadCrumb {
+	float: left;
+	padding-right: 2.0em;
+	margin: 4px;
+}
+#gsHeader div.gbBreadCrumb a, #gsHeader div.gbBreadCrumb span {
+	padding: 0 0 0 14px;
+	background: url('images/icon_path_separator.gif') no-repeat left;
+	text-decoration: none;
+}
+#gsHeader div.gbBreadCrumb a.BreadCrumb-1, #gsHeader div.gbBreadCrumb span.BreadCrumb-1 {
+	padding-left: 3px;
+	background-image: none;
+}
+/* Show Sidebar Link */
+#gsHeader #gbShowSidebar {
+		float: right;
+	white-space: nowrap;
+	margin: 4px;
+}
+
+/* Sidebar (Hidden by Default) */
+#gsSidebar {
+	position: absolute;
+	z-index: 101;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 3px;
+	border: 1px solid #000000;
+	overflow: hidden;
+}
+#gsSidebar #sidebarHeader {
+	color: #FFFFFF;
+	background-color: #000000;
+	padding: 4px;
+	margin: 2px;
+	text-align: right;
+	font-weight: bold;
+}
+div#gsSidebar ul span {
+	font-weight: bold;
+}
+div#gsSidebar div.block-core-ItemLinks a {
+	display: block;
+}
+div#gsSidebar div.block-core-PeerList a {
+	display: block;
+	padding: 3px;
+}
+div#gsSidebar div.block-core-PeerList span {
+	font-weight: bold;
+	display: block;
+	padding: 3px;
+}
+div#gsSidebar div.block-core-PeerList span.current {
+	font-weight: bold;
+}
+
+/* Matrix of Albums/Items */
+table#gsThumbMatrix {
+	border: 1px solid #000000;
+	border-spacing: 6px;
+	width: 100%;
+}
+table#gsThumbMatrix td table {
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#gsThumbMatrix td {
+	padding: 0;
+}
+#gsThumbMatrix td.itemContainer {
+	vertical-align: top;
+}
+#gsThumbMatrix td.giItemCell {
+	border: 1px solid #000000;
+}
+#gsThumbMatrix td img {
+	border: 0;
+	vertical-align: bottom;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+#gsThumbMatrix td.giAlbumCell {
+	border: 1px solid #000000;
+	text-align: center;
+}
+#gsThumbMatrix td.giAlbumCell img, #gsThumbMatrix td.giAlbumCell div {
+	border: 12px solid #FFFFFF;
+}
+#gsThumbMatrix td.giAlbumCell div table {
+	width: 100%;
+	height: 100%;
+}
+#gsThumbMatrix td.itemDescription {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+/* Item Hover Tooltip */
+#itemHover {
+	font-size: 0.8em;
+}
+
+/* Data footer  */
+td#gsFooter {
+	color: #FFFFFF;
+	background-color: #000000;
+	padding: 0;
+	margin: 0;
+}
+
+/* View image */
+table#gsItemContainer {
+	margin-left: auto;
+	margin-right: auto;
+}
+td#gsImageContainer {
+	border: 0px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-style: solid;
+	border-color: #000000;
+}
+#gsImageView {
+	text-align: center;
+}
+#gsImageView img {
+	border: 0;
+	vertical-align: bottom;
+	display: block;
+	margin-left: auto; margin-right: auto;
+}
+#giDescription {
+	float: left;
+	padding: 4px;
+}
+
+/* Album/Photo First/Prev/Next/Last Navigation */
+#gbNavigator {
+	float: right;
+	padding: 4px;
+	width: 275px;
+}
+#gbNavigator div.next-and-last {
+	float: right;
+}
+#gbNavigator div.first-and-previous {
+	float: right;
+	padding-right: 1.0em;
+}
+#gbNavigator a.first {
+	padding-left: 27px;
+	background: url("images/nav_first.gif") left no-repeat;
+}
+#gbNavigator a.previous {
+	padding-left: 27px;
+	background: url("images/nav_prev.gif") left no-repeat;
+}
+#gbNavigator a.next {
+	padding-right: 27px;
+	background: url("images/nav_next.gif") right no-repeat;
+}
+#gbNavigator a.last {
+	padding-right: 27px;
+	background: url("images/nav_last.gif") right no-repeat;
+}
+
+/* Block Container Below Albums/Items */
+#gsBottomBlock {
+	font-size: 0.8em;
+	padding-top: 1.0em;
+}
+
+/* Miscellaneous Building Blocks */
+#gallery h2, #gallery h3, #gallery h4, #gallery form {
+	margin: 0;
+	padding: 0;
+}
+#gallery #siteAdminForm {
+	width: 100%;
+}
+#gallery #userAdminForm {
+	width: 100%;
+}
+.giTitle, #gallery h2, #gallery h3, #gallery h4 {
+	font-size: 1.3em;
+}
+#gallery p {
+	margin: 0.6em 0;
+	padding: 0;
+}
+
+.gbBlock {
+	padding: 0.7em;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: #000;
+}
+.gbBlock img {
+	border: 0;
+}
+.gbBlock img.giThumbnail {
+	border: 1px solid #000;
+}
+.gbBlock ul {
+	margin: 0 0 0 4px;
+	padding: 0;
+	list-style-type: none;
+}
+.gbBlock ul ul {
+	margin: 0 0 0.5em 1.0em;
+}
+.gbBlock li {
+	padding: 6px 0 0 0;
+}
+#gallery .gbBlock h3 {
+	margin-bottom: 0.5em;
+}
+#gallery .gbBlock h4 {
+	margin-top: 0.5em;
+}
+
+table.gbDataTable {
+	border-collapse: collapse;
+}
+table.gbDataTable td {
+	border: 1px dashed #bbb;
+}
+table.gbDataTable th {
+	background-color: #ddd;
+	border: 1px solid #555;
+}
+table.gbDataTable th, table.gbDataTable td {
+	padding: 3px 6px 3px 6px;
+}
+
+.giBlockToggle {
+	font-family: monospace;
+	padding: 0 0.4em 0.1em;
+}
+.giBlockToggle:hover {
+	cursor: pointer;
+}
+
+.gbMarkupBar {
+	margin: 4px 0;
+}
+#gallery .gbMarkupBar input {
+	margin: 0;
+	padding: 0;
+}
+
+/* Main Page */
+body.gallery {
+	margin: 0;
+	padding: 0;
+	background-color: #EEEEFF;
+}
+#gallery {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 0.75em;
+	color: #000000;
+}
+#gallery.rtl {
+	direction: rtl;
+}
+
+.gcBackground1 {
+	background-color: #DDDDDD;
+}
+.gcBackground2 {
+	background-color: #EEEEFF;
+}
+
+.gcBorder1 {
+	border-width: 0;
+}
+.gcBorder2 {
+	border: 1px solid #000000;
+}
+
+#gallery a {
+	color: #555555;
+	text-decoration: none;
+}
+#gallery a:visited {
+	color: #555555;
+}
+#gallery a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+#gallery input:focus, #gallery textarea:focus {
+	background-color: #fff;
+	color: #000;
+}
+#gallery input.inputTypeSubmit, #gallery input.inputTypeButton {
+	background-color: #eee;
+	color: #000;
+	border: 1px solid #000;
+}
+
+.giSubtitle {
+	font-size: 0.9em;
+	font-weight: normal;
+}
+
+.giInfo {
+	font-size: 0.9em;
+}
+.giInfo span.summary {
+	display: block;
+	margin-right: 2.0em;
+}
+
+.giSuccess, .giWarning, .giError  {
+	font-weight: bold;
+}
+
+.giSuccess { color: #5c0; }
+.giWarning { color: #c50; }
+.giError { color: #a44; }
+
+.giNew, .giUpdated {
+	font-weight: bold;
+}
+
+.gbEven {
+	background-color: #EEEEEE;
+}
+.gbOdd {
+	background-color: #DDDDEE;
+}
+
+div.gbTabBar {
+	border-bottom: 1px solid #000;
+	margin: 10px 0 0;
+}
+
+div.gbTabBar span.o {
+	padding: 0px 10px 0px 10px;
+	font-size: 1.4em;
+	background-color: #eee;
+	border: 1px solid #000;
+	border-left-width: 0;
+}
+
+#gallery div.gbTabBar span.giSelected {
+	font-weight: bold;
+	background-color: #000;
+	color: #fff;
+}
+
+.autoCompleteContainer {
+	border: 1px solid #000000;
+	background-color: #fff;
+	border-top: 0px;
+	border-bottom: 1px dotted rgb(0, 128, 0);
+	margin-bottom: -1px;
+	margin-top: 0px;
+}
+.autoCompleteShadow {
+	background-color: #a0a0a0 !important;
+}
+.autoCompleteContainer li.yui-ac-highlight {
+	background-color: #FFC000;
+}
+
+div.block-search-SearchBlock a.advanced {
+	display: block;
+	padding: 3px;
+}
+
+div.block-core-ItemLinks {
+	margin: 3px 0;
+}
+div.block-core-ItemLinks a {
+	padding: 3px;
+}
+
+/* Slideshow/Search CSS */
+div.gbItemImage {
+	width: 100%;
+	text-align: center;
+}
+
+/* Admin Content Wrapper */
+div#gsContent {
+	border: 1px solid #000000;
+	border-bottom: 0;
+}
+
+div.block-comment-ViewComments {
+	margin: 10px 0 5px 0;
+}
+div.block-comment-ViewComments div.one-comment {
+	border: 1px solid #000;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+div.one-comment p.info {
+	font-style: italic;
+	text-align: right;
+}
+
+span.bsw_ButtonDisabled {
+	color: #999;
+}
+span.bsw_ButtonEnabled {
+	color: #000;
+	cursor: pointer;
+}
+td.bsw_BlockCommands {
+	white-space: nowrap;
+	text-align: center;
+}
+
+.gcLinkStyle1 a { color: #CCCCCC !important; text-decoration: none; }
+.gcLinkStyle1 a:visited { color: #CCCCCC !important; }
+.gcLinkStyle1 a:hover { color: #FFFFFF !important; }

@@ -31,6 +31,13 @@ login.txt
 build
 attic
 
+# Misc stuff #
+##############
+composer.phar
+*.zip
+*.tgz
+*.tar.gz
+
 # Non G2 Themes #
 #################
 /index.php

@@ -1,0 +1,15 @@
+#gallery form {
+	float: left;
+}
+
+#gsSidebar {
+	position: relative;
+	display: block;
+	border-width: 1px 0 0 0;
+	border-style: solid;
+	border-color: black;
+}
+
+#gsSidebarCol {
+	width: 220px;
+}

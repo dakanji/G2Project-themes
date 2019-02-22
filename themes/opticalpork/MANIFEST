@@ -1,0 +1,31 @@
+# $Revision: 848 $
+# File crc32 crc32(crlf) size size(crlf)  or  R File
+themes/opticalpork/images/arrow-left.gif	1356648957	1356648957	365	365
+themes/opticalpork/images/arrow-right.gif	275318514	275318514	362	362
+themes/opticalpork/images/blank.gif	1304196098	1304196098	43	43
+themes/opticalpork/images/bullet_toggle_plus.png	2942299421	2942299421	2957	2957
+themes/opticalpork/images/close.gif	269687974	269687974	222	222
+themes/opticalpork/images/closelabel.gif	68542876	68542876	979	979
+themes/opticalpork/images/loading.gif	383992056	383992056	2767	2767
+themes/opticalpork/images/nextlabel.gif	2860069846	2860069846	354	354
+themes/opticalpork/images/prevlabel.gif	3980789169	3980789169	371	371
+themes/opticalpork/js/effects.js	4266439656	1574390497	31969	32872
+themes/opticalpork/js/lightbox.js	949135240	3053262739	20095	20783
+themes/opticalpork/js/moo.fx.js	3544959956	1128089916	3267	3399
+themes/opticalpork/js/prototype.js	4108078250	1920235331	47445	49225
+themes/opticalpork/js/scriptaculous.js	1977477677	1894462034	2152	2196
+themes/opticalpork/lightbox.css	3055376484	1653638225	2068	2171
+themes/opticalpork/templates/admin.tpl	2223179791	325398832	392	401
+themes/opticalpork/templates/album.tpl	4045623873	2096619238	4478	4607
+themes/opticalpork/templates/error.tpl	1448920610	2787107596	988	1017
+themes/opticalpork/templates/module.tpl	3187112138	1551369846	390	399
+themes/opticalpork/templates/photo.tpl	2113085866	9328435	4438	4548
+themes/opticalpork/templates/progressbar.tpl	1134348449	2285656219	2697	2782
+themes/opticalpork/templates/theme.tpl	721456739	1722538688	3657	3757
+themes/opticalpork/theme.css	1056299035	802978304	5062	5403
+themes/opticalpork/theme.inc	1245575032	2094089807	6703	6926
+R	themes/opticalpork/images/groupinfo.png
+R	themes/opticalpork/images/key7-16-bw.gif
+R	themes/opticalpork/images/next.gif
+R	themes/opticalpork/images/prev.gif
+R	themes/opticalpork/images/userinfo.png

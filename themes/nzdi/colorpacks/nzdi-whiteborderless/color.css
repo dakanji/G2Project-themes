@@ -1,0 +1,34 @@
+/* ^PHPCS_CSS_T_OPEN_TAG^ $colorpackName = $gallery->i18n('NZDI White Borderless'); ^PHPCS_CSS_T_CLOSE_TAG^
+ * $Revision: 1248 $
+ */
+
+#gallery {
+  color: #000000 !important;
+  background-color: #fff !important;
+  border: #333 solid 0px !important;
+  }
+
+body.gallery { background-color: transparent !important;}
+
+.gcBackground1 { background-color: #fff !important; }
+.gcBackground2 { background-color: #efefef !important; }
+
+.gcBorder1 { border-color: #aaa !important; }
+.gcBorder2 { border-color: #888 !important; }
+
+#gallery select { background-color: #eee !important; }
+#gallery input { background-color: #eee !important; }
+#gallery textarea { background-color: #eee !important; }
+
+.gallery-thumb a img, #micro-navigation a img {  background: #eee !important; border-color: #999 !important; }
+.gallery-thumb a:hover img, #micro-navigation a:hover img, img.gallery-photo {  background: #e3e3e3 !important; border-color: #444 !important; }
+
+#micro-navigation #current-image img {  background: #e3e3e3 !important; border-color: #444 !important; }
+
+#photo-info .gallery-content { border-color: #999 !important; }
+
+.giDescription-id { color: #ccc !important; }
+
+#gsFooter {  border-color: #333 !important; }
+
+

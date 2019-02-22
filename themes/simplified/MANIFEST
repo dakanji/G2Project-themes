@@ -1,0 +1,20 @@
+# $Revision: 1277 $
+# File crc32 crc32(crlf) size size(crlf)  or  R File
+themes/simplified/admin.css	2384424102	2604427588	190	205
+themes/simplified/container.css	3140086644	2478229685	3345	3553
+themes/simplified/images/icon_path_separator.gif	2372364410	2372364410	106	106
+themes/simplified/images/nav_first.gif	4217739406	4217739406	89	89
+themes/simplified/images/nav_last.gif	724208	724208	92	92
+themes/simplified/images/nav_next.gif	4159809014	4159809014	133	133
+themes/simplified/images/nav_prev.gif	535899905	535899905	133	133
+themes/simplified/simplified.js	2960385617	1436800476	5697	5864
+themes/simplified/templates/admin.tpl	3750803330	3711887999	204	210
+themes/simplified/templates/album.tpl	3054394860	809691	5107	5267
+themes/simplified/templates/error.tpl	1026239133	1161843509	832	859
+themes/simplified/templates/module.tpl	1870994330	3463011647	319	331
+themes/simplified/templates/photo.tpl	549887902	4112494291	3303	3405
+themes/simplified/templates/progressbar.tpl	20870277	1440564148	2556	2640
+themes/simplified/templates/sidebar.tpl	492293605	2781473749	703	726
+themes/simplified/templates/theme.tpl	2796023352	1767956083	3728	3825
+themes/simplified/theme.css	648952969	2501717741	7981	8439
+themes/simplified/theme.inc	2802046319	3605373725	6347	6547

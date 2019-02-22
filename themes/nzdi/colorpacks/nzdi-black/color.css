@@ -1,0 +1,57 @@
+/* <?php $colorpackName = $gallery->i18n('NZDI  Black'); ?>
+ * $Revision: 1261 $
+ */
+
+#gallery {
+  color: #ffffff !important;
+  background-color: #000000 !important;
+  /* border-color: #034fa3 !important; */
+  }
+
+body.gallery { background-color: transparent !important;}
+
+.gcBackground1 { background-color: #595959 !important; }
+.gcBackground2 { background-color: #707070 !important; }
+
+.gcBorder1 { border-color: #999999 !important; }
+.gcBorder2 { border-color: #696969 !important; }
+
+#gallery a { color: #00a0ff !important; }
+#gallery a:hover { color: #cccc00 !important; }
+#gallery a:active { color: #cccc00 !important; }
+
+.gallery-thumb a img, #micro-navigation a img {  background: #eee !important; border-color: #999 !important; }
+.gallery-thumb a:hover img, #micro-navigation a:hover img, img.gallery-photo {  background: #e3e3e3 !important; border-color: #444 !important; }
+
+#micro-navigation #current-image img {  background: #e3e3e3 !important; border-color: #505050 !important; }
+
+#photo-info .gallery-content, .block-keyalbum-KeywordLinks, #gsFooter { border-color: #505050 !important; }
+
+.giInfo span.summary, .giDescription-id, .viewCount { color: #ddd !important; }
+
+.giDescription { color: #ffffff !important;  }
+
+#gallery a { color: #00a0ff !important; }
+#gallery a:hover { color: #cccc00 !important; }
+#gallery a:active { color: #cccc00 !important; }
+
+.giSuccess { color: #190 !important; }
+.giWarning { color: #b31 !important; }
+.giError { color: #d14 !important; }
+.giInfo { color: #aaaaaa !important; }
+.block-core-PeerList .current { color: #67b !important; }
+
+table.gbDataTable th { background-color: #303030 !important; }
+.gbEven { background-color: #707070 !important; }
+.gbOdd { background-color: #505050 !important; }
+
+#gallery select { background-color: #a0a0a0 !important; }
+#gallery input { background-color: #a0a0a0 !important; border-color: #fff !important; }
+#gallery textarea { background-color: #a0a0a0 !important; }
+#gallery div.gbTabBar a { color: #00a0ff !important; }
+
+.autoCompleteContainer li { color: #000 !important; }
+
+#gallery form { color: #fff !important;  }
+
+tr.bsw_ParamHeaderRow { color: #303030 !important; }

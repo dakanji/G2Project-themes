@@ -1,0 +1,812 @@
+/* *
+ ********** Default Style sheet for NZDI (NZ Digital Images) Theme *************
+ *******************************************************************************
+ * Building blocks
+ * div.gbBlock           Sidebar or content section with style for contained lists
+ * ul.gbBreadCrumb       List of links/path elements
+ * table.gbDataTable     Table for data/form elements with styles for shading rows
+ */
+#gallery {
+  clear: right;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border: #333 solid 2px;
+  padding: 7px;
+}
+#gallery a:link, #nzdi-footer a:link {
+  color: #3366cc;
+  text-decoration: none;
+  font-weight: bold;
+  }
+#gallery a:visited, #nzdi-footer a:visited {
+  color: #3366cc;
+  text-decoration: none;
+  font-weight: bold;
+  }
+#gallery a:active, #nzdi-footer a:active {
+  color: #3366cc;
+  text-decoration: none;
+  font-weight: bold;
+  }
+#gallery a:hover, #nzdi-footer a:hover {
+  color: #336699;
+  text-decoration: none;
+  font-weight: bold;
+  }
+#gallery h2, #gallery h3, #gallery h4, #gallery form {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  }
+#gallery p {
+  margin: 0.6em 0;
+  padding: 0;
+  }
+.gbBlock {
+  padding: 0.3em;
+  border-width: 0;
+  }
+.gbBlock ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  }
+.gbBlock ul ul {
+  margin: 0 0 0.5em 1.0em;
+  }
+.gbBlock li {
+  padding: 6px 0 0 0;
+  }
+#gallery .gbBlock h2 {
+  text-align: left;
+  color: #369;
+  }
+#gallery .gbBlock h3 {
+  margin-bottom: 0.5em;
+  }
+#gallery .gbBlock h4 {
+  margin-top: 0.5em;
+  text-align: left;
+  }
+#gsNavBar div.gbBreadCrumb {
+  margin: 0;
+  padding: 0 5px 5px 5px;
+  text-align: right;
+  }
+table.gbDataTable {
+  padding-bottom: 4px;
+  }
+table.gbDataTable th, table.gbDataTable td {
+  padding: 4px;
+  }
+.giBlockToggle {
+  padding: 0 0.4em 0.1em;
+  }
+.giBlockToggle:hover {
+  cursor: pointer;
+  }
+.gbMarkupBar {
+  margin: 4px 0;
+  }
+#gallery .gbMarkupBar input {
+  margin: 0;
+  padding: 0;
+  }
+
+/* ********************************************************************************
+ * Sections
+ * body.gallery     Page body in G2 standalone (doesn't apply to embedded)
+ * #gallery         Page container
+ * #gsNavBar        Top bar with breadcrumb and other links
+ * #gsSidebar       Sidebar
+ * #gsContent       Main content
+ */
+body.gallery {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  }
+#gallery {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: .75em;
+  color: #333;
+  background-color: #fff;
+  }
+#gallery.rtl {
+  direction: rtl;
+  }
+#gsNavBar {
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  }
+#gsNavBar div.gbSystemLinks {
+  padding: 4px 6px;
+  border: 0;
+  }
+#gsNavBar div.gbSystemLinks span {
+  padding: 0 4px;
+  }
+#gsSidebar {
+  width: 170px;
+  overflow: hidden;
+  border: none;
+  border-right: solid 1px;
+  border-bottom: solid 1px;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+  }
+.block-gallery #gsSidebar {
+  width: 220px;
+  overflow: hidden;
+  border: none;
+  }
+#gsSidebarCol {
+  width: 1%; /* Expand to fit content ("0" bad4 firefox, "1px" bad4 opera) */
+  }
+td.giAlbumCell, td.giItemCell {
+  padding: 5px;
+  text-align: center;
+  }
+#gallery td.giAlbumCell select, #gallery td.giItemCell select {
+  margin-top: 0.8em;
+  }
+td.giAlbumCell table, td.giItemCell table {
+  margin: auto; /* So imageframed thumbs can be centered */
+  }
+#gsPages {
+  border-top: solid 1px #aaa;
+  }
+#gsPages span {
+  padding: 0 0.3em;
+  }
+#gallery #gsSidebar ul {
+  font-size: 1em;
+  }
+
+
+/* ********************************************************************************
+ * Building blocks
+ * .gcBackground1,2..    Palette of backgrounds
+ * .gcBorder1,2..        Palette of borders
+ * a, h2, h3, etc        Standard html tags
+ * .giTitle, .giSubtitle, .giDescription, .giInfo, .giSuccess, .giWarning, .giError
+ *                       Palette of text styles
+ * div.gbBreadCrumb      List of links/path elements
+ * table.gbDataTable     Table for data/form elements with styles for shading rows
+ * div.gbTabBar          UI component for selectable tabs
+ * .autoComplete*        Styles for autoComplete popup lists
+ */
+
+.gcBackground1 {
+  background: #fff;
+  }
+
+/* Background  for,  Item and Album descriptions, legend background */
+.gcBackground2 {
+	background-color: #efefef;
+  }
+
+/* Background  for, Albums on Album pages */
+.gcBackground3 {
+  background-color: transparent;
+  }
+.gcBorder1 {
+  border-color: #aaa;
+  }
+
+/* Border  for,  Item and Album descriptions, legend background */
+.gcBorder2 {
+  border-color: #888;
+  }
+#gallery h2, #gallery h3, #gallery h4 {
+  font-family: "Trebuchet MS", Arial, Verdana, Helvetica, sans-serif;
+  }
+#gallery input:focus, #gallery textarea:focus {
+  background-color: #ffc;
+  color: #000;
+  }
+#gallery input.inputTypeSubmit, #gallery input.inputTypeButton {  /* No input[type=submit] in IE */
+  color: #333;
+  background-color: #eee;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e7e7e7 #666 #666 #e7e7e7;
+  }
+#gallery select {
+  font-size: 1em;
+  background-color: #eee;
+  }
+.giTitle, #gallery h2, #gallery h3, #gallery h4 {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: left;
+  color: #369;
+  }
+.giTitle {
+  text-align: center;
+  }
+#gallery pre, #gallery tt {
+  font-family: Courier New;
+  font-size: 1.2em;
+  }
+.giSubtitle {
+  font-size: 0.9em;
+  font-weight: normal;
+  vertical-align: text-bottom;
+  color: #000;
+  }
+.giDescription {
+  font-size: 1.1em;
+  line-height: 1.4em;
+  color: #000;
+  }
+.gbEmptyAlbum {
+  height: 400px;
+  }
+.giDescription h3.emptyAlbum {
+  line-height: 4.0em;
+  text-align: center;
+  }
+.giInfo {
+  font-size: 0.9em;
+  }
+.giInfo .summary {
+  display: block;
+  font-size: 1em;
+  color: #999;
+  text-align: center;
+  }
+.giSuccess, .giWarning, .giError  {
+  font-weight: bold;
+  }
+.giSuccess { color: #5c0; }
+.giWarning { color: #c50; }
+.giError { color: #a44; }
+.giNew, .giUpdated {
+  border-width: 2px;
+  border-style: ridge;
+  padding: 0 6px;
+  line-height: 1.9em;
+  color: #000;
+  }
+#gsNavBar div.gbBreadCrumb {
+  font-size: 1.1em;
+  font-weight: bold;
+  }
+#gsNavBar div.gbBreadCrumb a, #gsNavBar div.gbBreadCrumb span {
+  padding: 0 0 0 14px;
+  background: url('images/icon_path_separator.gif') no-repeat left;
+  }
+#gsNavBar div.gbBreadCrumb a.BreadCrumb-1 {   /* no :first-child in IE */
+  padding-left: 0;
+  background-image: none;
+  white-space: nowrap;
+  }
+#gallery.IE div.gbBreadCrumb span {
+  display: inline-block;   /* IE loses padding-left on wrapped inline nowrap element */
+  padding-right: 4px;      /* IE has less space at right of each span */
+  }
+#gsNavBar div.gbBreadCrumb span.BreadCrumb-1 {   /* no :first-child in IE */
+  padding-left: 0;
+  background-image: none;
+  }
+#gsNavBar div.gbSystemLinks {
+  float: right;
+  }
+table.gbDataTable th {
+  text-align: left;
+  background-color: #e7e7e7;
+  }
+.gbEven {
+  background-color: #fff;
+  }
+.gbOdd {
+  background-color: #eee;
+  }
+div.gbTabBar {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0.8em 0 0;
+  padding: 6px;
+  background: url('images/tab_bg.gif') repeat-x bottom;
+  white-space: nowrap;
+  }
+div.gbTabBar span.o {
+  padding: 6px 0 5px 8px;
+  background: url('images/tab_left.jpg') no-repeat left top;
+  }
+#gallery.IE div.gbTabBar span.o {
+  display: inline-block;   /* IE loses padding-left on wrapped inline nowrap element */
+  margin-bottom: 1px;      /* ..and then adds padding differently with inline-block.. */
+  }
+
+/* IE may clip off the right end of a long set of tabs, so allow IE to wrap them */
+#gallery.IE div.gbTabBar { padding-bottom: 0; white-space: normal; }
+#gallery.IE div.gbTabBar span.giSelected { margin-bottom: 0; }
+#gallery div.gbTabBar span span {
+  padding: 6px 12px 5px 4px;
+  background: url('images/tab_right.jpg') no-repeat right top;
+  }
+#gallery div.gbTabBar a {
+  color: #777;
+  text-decoration: none;
+  }
+#gallery div.gbTabBar a:hover {
+  color: #333;
+  }
+#gallery div.gbTabBar span.giSelected {
+  padding-bottom: 6px;
+  background-image: url('images/tab_left_on.jpg');
+  }
+
+#gallery div.gbTabBar span.giSelected span {
+  color: #333;
+  padding-bottom: 6px;
+  background-image: url('images/tab_right_on.jpg');
+  }
+.autoCompleteBackground {
+  border: 1px solid #ccc;
+  border-top-style: none;
+  margin: 0;
+  }
+.autoCompleteHighlight {
+  text-decoration: underline;
+  }
+.autoCompleteNotSelected {
+  background-color: #eee;
+  padding: 3px 4px 3px 17px;
+  }
+.autoCompleteSelected {
+  background-color: #ffc;
+  padding: 3px 4px 3px 17px;
+  }
+#gallery .gbMarkupBar input {
+  font-size: 1.1em;
+  }
+#ProgressBar #progressDone {
+  background-color: #fd6704;
+  border: thin solid #ddd;
+  }
+#ProgressBar #progressToGo {
+  background-color: #eee;
+  border: thin solid #ddd;
+  }
+.giSearchHighlight {
+  font-weight: bold;
+  background-color: #ff6;
+  }
+
+
+/* ********************************************************************************
+ * Sections
+ * #gallery         Page container
+ * #gsNavBar        Top bar with breadcrumb and other links
+ * #gsSidebar       Sidebar
+ * #gsContent       Main content
+ * #giFormUsername  Form field for entering a username
+ * #giFormGroupname Form field for entering a group name
+ */
+#gsNavBar div {
+	margin-top: 0.1em;  /* Align system links with breadcrumb */
+	font-weight: bold;
+  }
+#gsSidebar div ul {   /* no > in IE */
+	font-size: 1em;
+	font-weight: bold;
+  }
+#gsSidebar div ul ul {
+  font-size: 1.0em;
+  }
+#gsSidebar ul span {
+  color: #999;
+  }
+#giFormUsername, .giFormUsername {
+  background: url('images/userinfo.png') no-repeat 0 1px;
+  padding-left: 17px;
+  }
+#giFormGroupname {
+  background: url('images/groupinfo.png') no-repeat 0 1px;
+  padding-left: 17px;
+  }
+#giFormPassword {
+  background: url('images/key7-16-bw.gif') no-repeat 0 1px;
+  padding-left: 17px;
+  }
+
+/* Opera ignores padding in form inputs; put icons on right side instead */
+#gallery.opera #giFormUsername, #gallery.opera .giFormUsername,
+#gallery.opera #giFormGroupname, #gallery.opera #giFormPassword {
+  background-position: right center;
+  }
+
+
+/* ***************************************************** */
+/*      Format the Pagination Links                      */
+/* ***************************************************** */
+.block-core-Navigator-wrapper {
+  border-top: #999 solid 1px;
+  }
+.block-core-Navigator {
+  text-align: center;
+  padding: 0.2em 0 0.2em 0;
+  }
+.block-core-Navigator div.next-and-last {
+  display: inline;
+  }
+.block-core-Navigator a.next {
+  padding-left: 1em;
+  }
+.block-core-Navigator a.last {
+  padding-left: 1em;
+  }
+.block-core-Navigator div.first-and-previous {
+  display: inline;
+  }
+.block-core-Navigator a.first {
+  padding-right: 1em;
+  }
+.block-core-Navigator a.previous {
+  padding-right: 1em;
+  }
+div.block-search-SearchBlock a.advanced {
+  display: block;
+  padding-top: 10px;
+  }
+div.block-core-ItemLinks {
+  padding: 2px 0 5px 0;
+  text-align: center;
+  }
+.gbSystemLinks .block-core-ItemLinks {
+  text-align: left;
+  }
+#gsSidebar div.block-core-ItemLinks {
+  text-align: left;
+  }
+div.block-core-ItemLinks a {
+  padding: 3px;
+  }
+#gsContent div.block-core-ItemLinks {
+  padding: 2px 3px 5px 0;
+  text-align: left;
+  float: right;
+  }
+div#gsSidebar div.block-core-ItemLinks a {
+  display: block;
+  }
+div#gsSidebar div.block-core-PeerList a {
+  display: block;
+  padding: 3px;
+  }
+div#gsSidebar div.block-core-PeerList span {
+  font-weight: bold;
+  display: block;
+  padding: 3px;
+  }
+div#gsSidebar div.block-core-PeerList span.current {
+  color: #0b6cff;
+  }
+
+
+/* ***************************************************** */
+/*                   Dynamic blocks                      */
+/* ***************************************************** */
+div.block-comment-ViewComments {
+  margin: 5px;
+  }
+div.block-comment-ViewComments div.one-comment {
+  border: 1px solid #e7e7e7;
+  padding: 5px;
+  margin-bottom: 5px;
+  }
+div.block-comment-ViewComments span {
+  padding-right: 5px;
+  }
+div.block-comment-ViewComments p.info {
+  font-style: italic;
+  text-align: right;
+  font-size: 0.95em;
+  }
+div.block-core-GuestPreview {
+  float: right;
+  }
+#gallery.rtl div.block-core-GuestPreview {
+  float: left;
+  }
+div.block-exif-ExifInfo {
+  margin: 5px;
+  border: solid 1px #ccc;
+  }
+div.block-exif-ExifInfo tr {
+  border: solid 1px #ccc;
+  }
+span.bsw_ButtonDisabled {
+  color: #999;
+  }
+span.bsw_ButtonEnabled {
+  color: #000;
+  cursor: pointer;
+  }
+table.bsw_ParamTable {
+  width: 100%;
+  border: 1px solid #999;
+  border-collapse: collapse;
+  }
+tr.bsw_ParamHeaderRow {
+  background-color: #eee;
+  }
+tr.bsw_ParamHeaderRow td {
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #999;
+  }
+td.bsw_BlockCommands {
+  white-space: nowrap;
+  text-align: center;
+  }
+#gsFooter {
+  margin-top: 6px;
+  border: solid 1px #999;
+  padding: 4px 4px 2px 4px;
+  }
+#gsImageView {
+  text-align: center;
+  }
+.giTitle .date,  .viewCount{
+  color: #000;
+  }
+#gallery-header {
+  color: #ccc;
+  zoom: 100%; /* Fix Invisible text in IE in .viewCount and .size - float right*/
+  }
+.gbSystemLinks {
+  border-top: solid 1px #999;
+  }
+.gbSystemLinks .size,  .gbSystemLinks .viewCount, .gbSystemLinks .giDescription-id {
+  color: #ccc;
+  float: right;
+  clear: right;
+  }
+.block-albumselect-AlbumSelect {
+  text-align: center;
+  padding: 5px 0 0 0;
+  }
+.block-core-SystemLink {
+  padding-right: 0.5em;
+  }
+
+
+/* ***************************************************** */
+/*         Format Photo & Album Descriptions             */
+/* ***************************************************** */
+#photo-info {
+  text-align: left;
+  clear: both;
+  /*position: relative;*/
+  }
+#photo-info h2 {
+  text-align: center;
+  margin-top: 1em;
+  color: #369;
+  }
+#photo-info .gallery-content {
+  padding: 3px;
+  text-align: justify;
+  border: solid 1px #999;
+  }
+#photo-info .giDescription  {
+  font-size: 1.1em;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 2px;
+  }
+#photo-info .keyword {
+  font-weight: bold;
+  }
+
+
+/* ***************************************************** */
+/*      Format the Border around Gallery Thumbnails      */
+/* ***************************************************** */
+.gallery-thumb a img, .one-image a img {
+  background: #eee;
+  padding: 5px;
+  border: #999 2px solid;
+  }
+.gallery-thumb a:hover img, .one-image a:hover img {
+  background: #e3e3e3;
+  padding: 5px;
+  border: #444 2px solid;
+  }
+
+
+/* ***************************************************** */
+/*              Format the Gallery Photo Page            */
+/* ***************************************************** */
+div.gallery-photo {
+	text-align: center;
+  }
+img.gallery-photo {
+	background: #e3e3e3;
+	padding: 10px;
+  border: #444 2px solid;
+  margin-top: 1px;
+  }
+#prevArrow img, #nextArrow img {
+	border-style: none;
+  }
+
+
+/* ***************************************************** */
+/*     Format Search Results - Requires Search Module    */
+/* ***************************************************** */
+#gbThumbMatrix {
+  margin-top: 20px;
+  }
+.gbItemAlbum, .gbItemImage{
+  vertical-align: top;
+  border: 1px solid #ccc;
+  padding: 10px;
+  }
+.gbItemAlbum img, .gbItemImage img {
+	background: #eee;
+	padding: 7px;
+  }
+.gbItemAlbum a img, .gbItemImage a img {
+  background: #eee;
+  }
+.gbItemAlbum a:hover img, .gbItemImage a:hover img {
+  background: #bdd3eb;
+  }
+
+
+/* ***************************************************** */
+/*      Format Shopping cart text in Gallery Header      */
+/*     (Requires Shopping cart Module & module mods)     */
+/* ***************************************************** */
+.block-checkout-ShowCart {
+  margin: 2px 0 5px 5px;
+  border: solid 1px #ff0000;
+  width: 200px;
+  text-align: center;
+  padding: 2px;
+  }
+.gbLink-checkout_SelectProducts {
+  background: transparent url(images/cart.png) no-repeat;
+  }
+.gbLink-checkout_AddToCart {
+  background: transparent url(images/cart.png) 0 2px no-repeat;
+  }
+
+
+/* ***************************************************** */
+/* Format position of Ratings - Ratings Module Required  */
+/* ***************************************************** */
+.block-rating-Rating {
+  text-align: center;
+  }
+.giRatingAverageContainer {
+  margin: auto
+  }
+
+
+/* ***************************************************** */
+/* Format micro navigation in Photo pages                */
+/* ***************************************************** */
+fieldset#micro-navigation-wrapper {
+  clear: both;
+  margin-bottom: 0;
+  }
+#micro-navigation-wrapper {
+  border: solid 1px #999;
+  margin-top: 10px;
+  }
+#micro-navigation-wrapper legend {
+  border: solid 1px ;
+  padding: 0.25em;
+  }
+#micro-navigation {
+  margin-top: 3px;
+  }
+#micro-navigation a img {
+  padding: 3px;
+  display: inline;
+  background: #eee;
+  border: #999 2px solid;
+  }
+#micro-navigation a:hover img {
+  padding: 3px;
+  display: inline;
+  background: #e3e3e3;
+  border: #444 2px solid;
+  }
+#micro-navigation #current-image img {
+  padding: 3px;
+  display: inline;
+  background: #e3e3e3;
+  border: #d60608 2px solid;
+  }
+
+
+/* ***************************************************** */
+/* Format Ecard Module Form - Requires ECard Module      */
+/* ***************************************************** */
+#sendEcardForm textarea {
+  width: 450px;
+  }
+
+
+/* ***************************************************** */
+/* Format Full Size Image Link                           */
+/* ***************************************************** */
+.giFull-size {
+  text-align: center;
+  }
+
+
+/* ***************************************************** */
+/* Format custom fields in Photo pages                   */
+/* ***************************************************** */
+.block-customfield-CustomFields h3 {
+  display: none;
+  }
+.block-customfield-CustomFields .giDescription {
+  text-align: center;
+  color: #666;
+  }
+
+
+/* ***************************************************** */
+/* Format Embedded Gallery                               */
+/* ***************************************************** */
+.block-albumselect-AlbumTree {
+  margin: 0;
+  border: #444 2px solid;
+  }
+.block-albumselect-AlbumTree p {
+  border-bottom: solid 1px;
+  padding-bottom: 2px;
+  }
+.dtree {
+  font-size: 0.85em;
+  font-weight: bold;
+  }
+
+
+/* ***************************************************** */
+/* Format Keywords Links                                 */
+/* ***************************************************** */
+.block-keyalbum-KeywordLinks {
+  border: solid #999 1px;
+  margin: 5px 0 5px 0;
+  padding: 2px;
+  clear: both;
+  position: relative;
+  }
+.block-keyalbum-KeywordLinks a {
+  margin: 0 0.25em 0 0.25em;
+  }
+
+
+/* ***************************************************** */
+/* Format NZDI Footer                                    */
+/* ***************************************************** */
+#nzdi-footer {
+  text-align: center;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+  margin: 0.5em 0 1em 0;
+  }
+
+/* ***************************************************** */
+/* Format Tags Cloud - Requires Tags Module              */
+/* ***************************************************** */
+#folksonomy {
+  margin-top: 0;
+	background-color: #fff;
+	border: none;
+	padding: 1em;
+	margin-top: 10px;
+	width: 95%;
+	font: 100% Verdana, Geneva, Arial, Helvetica, sans-serif;
+	}

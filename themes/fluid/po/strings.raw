@@ -1,0 +1,22 @@
+# $Id: strings.raw 525 2006-03-25 19:43:34Z mindless $
+
+/* theme.inc */
+gettext("Fluid")
+gettext("A Flash based Theme")
+
+/* templates/album.tpl */
+gettext("This album is empty.") /* also in: templates/album_flash.tpl */
+gettext("Add a photo!") /* also in: templates/album_flash.tpl */
+gettext("no thumbnail")
+gettext("Album: %s")
+
+/* templates/error.tpl */
+gettext("Error!")
+
+/* templates/photo.tpl */
+gettext("Download %s")
+gettext("There is nothing to view for this item.")
+gettext("Download %s in original format")
+
+/* templates/progressbar.tpl */
+gettext("Continue...")

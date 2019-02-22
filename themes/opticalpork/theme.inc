@@ -1,0 +1,289 @@
+<?php
+/*
+ * Gallery - a web based photo album viewer and editor
+ * Copyright (C) 2000-2006 Bharat Mediratta
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or (at
+ * your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA  02110-1301, USA.
+ *//**
+ * Theme based on Siriux
+ * @package Themes
+ * @subpackage Opticalpork
+ * @author Christian Mohn <h0bbel@p0ggel.org
+ * @version $Revision: 847 $
+ */
+class OpticalporkTheme extends GalleryTheme {
+	public function __construct() {
+		global $gallery;
+
+		$this->setId('opticalpork');
+		$this->setName($gallery->i18n('Opticalpork'));
+		$this->setDescription($gallery->i18n('Opticalpork.com Gallery theme'));
+
+		$this->setVersion('7.0.0');
+		$this->setRequiredCoreApi(array(7, 0));
+		$this->setRequiredThemeApi(array(2, 2));
+
+		$this->setStandardSettings(
+			array(
+				'perPage'        => 9,
+				'contentWidth'   => 700,
+				'albumBlocks'    => serialize(
+					array(array('comment.ViewComments', array()))
+				),
+				'photoBlocks'    => serialize(
+					array(
+						array('exif.ExifInfo', array()),
+						array('comment.ViewComments', array()),
+					)
+				),
+				'sidebarBlocks'  => serialize(array()),
+				'contentWidth'   => 700,
+				'groupByYear'    => 0,
+				'enableImageMap' => 1,
+			)
+		);
+	}
+
+	/**
+	 * @see GalleryTheme::showAlbumPage
+	 */
+	public function showAlbumPage(&$template, $item, $params, $childIds) {
+		$ret = $this->loadCommonTemplateData(
+			$template,
+			$item,
+			$params,
+			array(
+				'owner',
+				'viewCount',
+				'childCount',
+				'descendentCount',
+				'parents',
+				'systemLinks',
+				'itemLinks',
+				'itemSummaries',
+				'permissions',
+				'thumbnails',
+				'pageNavigator',
+				'jumpRange',
+			),
+			$childIds
+		);
+
+		if ($ret) {
+			return array($ret, null);
+		}
+
+		// Override some navigator settings
+		$theme =& $template->getVariableByReference('theme');
+
+		if (isset($theme['navigator']['first'])) {
+			unset($theme['navigator']['first']);
+		}
+
+		if (isset($theme['navigator']['last'])) {
+			unset($theme['navigator']['last']);
+		}
+
+		// Find the thumbnail size for this album
+		$theme['params']['thumbnailSize'] = 150;
+
+		list($ret, $preferences) = GalleryCoreApi::fetchDerivativePreferencesForItem($item->getId());
+
+		if ($ret) {
+			return array($ret, null);
+		}
+
+		foreach ($preferences as $preference) {
+			if ($preference['derivativeType'] == DERIVATIVE_TYPE_IMAGE_THUMBNAIL
+				&& preg_match('/thumbnail\|(\d+)/', $preference['derivativeOperations'], $matches)
+			) {
+				$theme['params']['thumbnailSize'] = $matches[1];
+
+				break;
+			}
+		}
+		// Lightbox customization - Fetch resize IDs
+		foreach ($childIds as $childId) {
+			list($ret, $resizeTable) = GalleryCoreApi::fetchResizesByItemIds(array($childId));
+
+			if (isset($resizeTable[$childId][0])) {
+				$theme['resizeId'][$childId] = $resizeTable[$childId][0]->getId();
+			}
+		}
+
+		return array(null, 'theme.tpl');
+	}
+
+	/**
+	 * @see GalleryTheme::showPhotoPage
+	 */
+	public function showPhotoPage(&$template, $item, $params) {
+		$ret = $this->loadCommonTemplateData(
+			$template,
+			$item,
+			$params,
+			array(
+				'owner',
+				'parents',
+				'systemLinks',
+				'itemLinks',
+				'permissions',
+				'itemLinksDetailed',
+				'itemNavigator',
+				'imageViews',
+			)
+		);
+
+		if ($ret) {
+			return array($ret, null);
+		}
+
+		// Override some navigator settings
+		$theme =& $template->getVariableByReference('theme');
+
+		if (isset($theme['navigator']['first'])) {
+			unset($theme['navigator']['first']);
+		}
+
+		if (isset($theme['navigator']['last'])) {
+			unset($theme['navigator']['last']);
+		}
+
+		return array(null, 'theme.tpl');
+	}
+
+	/**
+	 * @see GalleryTheme::showModulePage
+	 */
+	public function showModulePage(&$template, $item, $params, $templateFile) {
+		$ret = $this->loadCommonTemplateData(
+			$template,
+			$item,
+			$params,
+			array('parents', 'systemLinks')
+		);
+
+		if ($ret) {
+			return array($ret, null);
+		}
+
+		// Add in our extra stuff
+		$theme                   =& $template->getVariableByReference('theme');
+		$theme['moduleTemplate'] = $templateFile;
+
+		// Add our header and styles
+		return array(null, 'theme.tpl');
+	}
+
+	/**
+	 * @see GalleryTheme::showAdminPage
+	 */
+	public function showAdminPage(&$template, $item, $params, $templateFile) {
+		$ret = $this->loadCommonTemplateData(
+			$template,
+			$item,
+			$params,
+			array('parents', 'systemLinks')
+		);
+
+		if ($ret) {
+			return array($ret, null);
+		}
+
+		// Add in our extra stuff
+		$theme                  =& $template->getVariableByReference('theme');
+		$theme['adminTemplate'] = $templateFile;
+
+		return array(null, 'theme.tpl');
+	}
+
+	/**
+	 * @see GalleryTheme::showErrorPage
+	 */
+	public function showErrorPage(&$template) {
+		return array(null, 'error.tpl');
+	}
+
+	/**
+	 * @see GalleryTheme::showProgressBarPage
+	 */
+	public function showProgressBarPage(&$template, $item, $params) {
+		$ret = $this->loadCommonTemplateData(
+			$template,
+			$item,
+			$params,
+			array('parents', 'systemLinks')
+		);
+
+		if ($ret) {
+			return array($ret, null);
+		}
+
+		return array(null, 'theme.tpl');
+	}
+
+	/**
+	 * @see GalleryTheme::getSettings()
+	 */
+	public function getSettings($itemId = null) {
+		list($ret, $settings, $params) = parent::getSettings($itemId);
+
+		if ($ret) {
+			return array($ret, null);
+		}
+
+		// Add in our custom settings
+		$settings[] = array(
+			'key'        => 'contentWidth',
+			'name'       => $this->translate('Width of page content in pixels'),
+			'type'       => 'text-field',
+			'typeParams' => array(
+				'size' => 2,
+			),
+			'value'      => $params['contentWidth'],
+		);
+		$settings[] = array(
+			'key'   => 'groupByYear',
+			'name'  => $this->translate(
+				'Group sub-albums by year (album must be sorted by date!)'
+			),
+			'type'  => 'checkbox',
+			'value' => $params['groupByYear'],
+		);
+		$settings[] = array(
+			'key'   => 'enableImageMap',
+			'name'  => $this->translate(
+				'Enable prev/next navigation by clicking in the left/right half of the image'
+			),
+			'type'  => 'checkbox',
+			'value' => $params['enableImageMap'],
+		);
+
+		return array(null, $settings);
+	}
+
+	/**
+	 * @see GalleryTheme::validateSettings
+	 */
+	public function validateSettings($settings) {
+		$error = parent::validateSettings($settings);
+
+		if (!is_numeric($settings['contentWidth'])) {
+			$error['contentWidth'] = $this->translate('You must enter a number');
+		}
+
+		return $error;
+	}
+}

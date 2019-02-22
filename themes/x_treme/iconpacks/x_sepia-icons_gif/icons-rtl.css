@@ -1,0 +1,910 @@
+li.giSelected {
+  padding-left: 22px;
+  background: url(bullet_arrow.gif) left center no-repeat;
+}
+
+.gbAdminLink {
+  padding-left: 22px !important;
+  background: url(bullet.gif) left center no-repeat;
+}
+
+.gbAdminLink a {
+  margin-left: -22px;
+  padding-left: 22px;
+}
+
+li.gbAdminLink {
+  padding-left: 22px !important;
+}
+
+li.gbAdminLink a {
+  margin-left: -22px;
+  padding-left: 24px;
+  margin-top: -6px;
+  padding-top: 6px;
+}
+
+/* Special */
+a.gbLink-Help:hover {
+  width: 16px;
+  height: 16px;
+  background: url(hover/help.gif) left center no-repeat;
+}
+.gbLink-Help {
+  width: 16px;
+  height: 16px;
+  background: url(help.gif) left center no-repeat;
+}
+
+.gbLink-Help a {
+  display: none;
+}
+
+/* Core */
+a.gbLink-core_ItemAdmin-core_ItemAdd:hover, .gbLink-core_ItemAdmin-core_ItemAdd a:hover {
+  background: url(hover/add_items.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-core_ItemAdd {
+  background: url(add_items.gif) left center no-repeat;
+}
+
+a.gbLink-core_ItemAdmin-core_ItemAddAlbum:hover, .gbLink-core_ItemAdmin-core_ItemAddAlbum a:hover {
+  background: url(hover/add_album.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-core_ItemAddAlbum {
+  background: url(add_album.gif) left center no-repeat;
+}
+
+a.gbLink-core_ItemAdmin-core_ItemDelete:hover, .gbLink-core_ItemAdmin-core_ItemDelete a:hover,
+a.gbLink-core_ItemAdmin-core_ItemDeleteSingle:hover, .gbLink-core_ItemAdmin-core_ItemDeleteSingle a:hover {
+  background: url(hover/delete_photo.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-core_ItemDelete,
+.gbLink-core_ItemAdmin-core_ItemDeleteSingle {
+  background: url(delete_photo.gif) left center no-repeat;
+}
+
+a.gbLink-core_ItemAdmin-core_ItemDelete-album:hover, .gbLink-core_ItemAdmin-core_ItemDelete-album a:hover,
+a.gbLink-core_ItemAdmin-core_ItemDeleteSingle-album:hover, .gbLink-core_ItemAdmin-core_ItemDeleteSingle-album a:hover {
+  background: url(hover/delete_album.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-core_ItemDelete-album,
+.gbLink-core_ItemAdmin-core_ItemDeleteSingle-album {
+  background: url(delete_album.gif) left center no-repeat;
+}
+
+a.gbLink-core_ItemAdmin-core_ItemEdit:hover, .gbLink-core_ItemAdmin-core_ItemEdit a:hover {
+  background: url(hover/edit_photo.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-core_ItemEdit {
+  background: url(edit_photo.gif) left center no-repeat;
+}
+
+a.gbLink-core_ItemAdmin-core_ItemEdit-album:hover, .gbLink-core_ItemAdmin-core_ItemEdit-album a:hover {
+  background: url(hover/edit_album.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-core_ItemEdit-album {
+  background: url(edit_album.gif) left center no-repeat;
+}
+
+a.gbLink-core_ItemAdmin-core_ItemEditCaptions:hover, .gbLink-core_ItemAdmin-core_ItemEditCaptions a:hover {
+  background: url(hover/edit_captions.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-core_ItemEditCaptions {
+  background: url(edit_captions.gif) left center no-repeat;
+}
+
+a.gbLink-core_ItemAdmin-core_ItemPermissions:hover, gbLink-core_ItemAdmin-core_ItemPermissions a:hover {
+  background: url(hover/edit_permissions.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-core_ItemPermissions {
+  background: url(edit_permissions.gif) left center no-repeat;
+}
+
+a.gbLink-core_ItemAdmin-core_ItemReorder:hover, .gbLink-core_ItemAdmin-core_ItemReorder a:hover {
+  background: url(hover/reorder_items.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-core_ItemReorder {
+  background: url(reorder_items.gif) left center no-repeat;
+}
+
+a.gbLink-core_ItemAdmin-core_ItemMove:hover, .gbLink-core_ItemAdmin-core_ItemMove a:hover,
+a.gbLink-core_ItemAdmin-core_ItemMoveSingle:hover, .gbLink-core_ItemAdmin-core_ItemMoveSingle a:hover {
+  background: url(hover/move_photo.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-core_ItemMove,
+.gbLink-core_ItemAdmin-core_ItemMoveSingle {
+  background: url(move_photo.gif) left center no-repeat;
+}
+
+a.gbLink-core_ItemAdmin-core_ItemMakeHighlight:hover, .gbLink-core_ItemAdmin-core_ItemMakeHighlight a:hover {
+  background: url(hover/make_highlight.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-core_ItemMakeHighlight {
+  background: url(make_highlight.gif) left center no-repeat;
+}
+
+a.gbLink-core_AdminCore:hover, .gbLink-core_AdminCore a:hover {
+  background: url(hover/general.gif) left center no-repeat;
+}
+.gbLink-core_AdminCore {
+  background: url(general.gif) left center no-repeat;
+}
+
+a.gbLink-core_AdminPlugins:hover, .gbLink-core_AdminPlugins a:hover {
+  background: url(hover/modules.gif) left center no-repeat;
+}
+.gbLink-core_AdminPlugins {
+  background: url(modules.gif) left center no-repeat;
+}
+
+.icon-plugin-inactive {
+  background-image: url(delete.gif);
+}
+.icon-plugin-active {
+  background-image: url(bullet_checked.gif);
+}
+
+a.icon-plugin-upgrade:hover, .icon-plugin-upgrade a:hover {
+  background-image: url(hover/upgrade.gif);
+}
+.icon-plugin-upgrade {
+  background-image: url(upgrade.gif);
+}
+
+a.icon-plugin-uninstall:hover, .icon-plugin-uninstall a:hover {
+  background-image: url(hover/bullet_delete.gif);
+}
+.icon-plugin-uninstall {
+  background-image: url(bullet_delete.gif);
+}
+
+.icon-plugin-incompatible {
+  background-image: url(error.gif);
+}
+.icon-plugin-locked {
+  background-image: url(lock.gif);
+}
+
+a.gbLink-core_AdminThemes:hover, .gbLink-core_AdminThemes a:hover {
+  background: url(hover/layout.gif) left center no-repeat;
+}
+.gbLink-core_AdminThemes {
+  background: url(layout.gif) left center no-repeat;
+}
+
+a.gbLink-core_AdminToolkitPriority:hover, .gbLink-core_AdminToolkitPriority a:hover {
+  background: url(hover/toolkit_priority.gif) left center no-repeat;
+}
+.gbLink-core_AdminToolkitPriority {
+  background: url(toolkit_priority.gif) left center no-repeat;
+}
+
+a.gbLink-core_AdminMaintenance:hover, .gbLink-core_AdminMaintenance a:hover {
+  background: url(hover/site_maintenance.gif) left center no-repeat;
+}
+.gbLink-core_AdminMaintenance {
+  background: url(site_maintenance.gif) left center no-repeat;
+}
+
+a.gbLink-core_AdminPerformance:hover, .gbLink-core_AdminPerformance a:hover {
+  background: url(hover/admin_performance.gif) left center no-repeat;
+}
+.gbLink-core_AdminPerformance {
+  background: url(admin_performance.gif) left center no-repeat;
+}
+
+/* Users */
+a.gbLink-core_UserChangePassword:hover, .gbLink-core_UserChangePassword a:hover {
+  background: url(hover/change_password.gif) left center no-repeat;
+}
+.gbLink-core_UserChangePassword {
+  background: url(change_password.gif) left center no-repeat;
+}
+
+a.gbLink-core_UserPreferences:hover, .gbLink-core_UserPreferences a:hover {
+  background: url(hover/account_setting.gif) left center no-repeat;
+}
+.gbLink-core_UserPreferences {
+  background: url(account_setting.gif) left center no-repeat;
+}
+
+a.gbLink-core_AdminUsers:hover, .gbLink-core_AdminUsers a:hover {
+  background: url(hover/users.gif) left center no-repeat;
+}
+.gbLink-core_AdminUsers {
+  background: url(users.gif) left center no-repeat;
+}
+
+a.gbLink-core_AdminGroups:hover, .gbLink-core_AdminGroups a:hover {
+  background: url(hover/groups.gif) left center no-repeat;
+}
+.gbLink-core_AdminGroups {
+  background: url(groups.gif) left center no-repeat;
+}
+
+a.gbLink-core_UserLogin:hover, .gbLink-core_UserLogin a:hover {
+  background: url(hover/change_password.gif) left center no-repeat;
+}
+.gbLink-core_UserLogin {
+  background: url(change_password.gif) left center no-repeat;
+}
+
+a.gbLink-register_UserSelfRegistration:hover, .gbLink-register_UserSelfRegistration a:hover {
+  background: url(hover/registration.gif) left center no-repeat;
+}
+.gbLink-register_UserSelfRegistration {
+  background: url(registration.gif) left center no-repeat;
+}
+
+a#giFormUsername:hover, a.giFormUsername:hover,
+#giFormUsername a:hover, .giFormUsername a:hover {
+  background-image: url(hover/user.gif);
+}
+#giFormUsername, .giFormUsername {
+  background-image: url(user.gif);
+}
+
+a#giFormGroupname:hover, #giFormGroupname a:hover {
+  background-image: url(hover/group.gif);
+}
+#giFormGroupname {
+  background-image: url(group.gif);
+}
+
+a#giFormPassword:hover, #giFormPassword a:hover {
+  background-image: url(hover/change_password.gif);
+}
+#giFormPassword {
+  background-image: url(change_password.gif);
+}
+
+/* Import */
+a.gbLink-archiveupload_ArchiveUploadSiteAdmin:hover, .gbLink-archiveupload_ArchiveUploadSiteAdmin a:hover {
+  background: url(hover/import_archive.gif) left center no-repeat;
+}
+.gbLink-archiveupload_ArchiveUploadSiteAdmin {
+  background: url(import_archive.gif) left center no-repeat;
+}
+
+a.gbLink-itemadd_ItemAddSiteAdmin:hover, .gbLink-itemadd_ItemAddSiteAdmin a:hover {
+  background: url(hover/webserver.gif) left center no-repeat;
+}
+.gbLink-itemadd_ItemAddSiteAdmin {
+  background: url(webserver.gif) left center no-repeat;
+}
+
+a.gbLink-migrate_SelectGallery:hover, .gbLink-migrate_SelectGallery a:hover {
+  background: url(hover/gallery.gif) left center no-repeat;
+}
+.gbLink-migrate_SelectGallery {
+  background: url(gallery.gif) left center no-repeat;
+}
+
+.gbLink-picasa_SelectPicasaExportPath {
+  background: url(picasa.gif) left center no-repeat;
+}
+
+a.gbLink-remote_RemoteSiteAdmin:hover, .gbLink-remote_RemoteSiteAdmin a:hover {
+  background: url(hover/remote.gif) left center no-repeat;
+}
+.gbLink-remote_RemoteSiteAdmin {
+  background: url(remote.gif) left center no-repeat;
+}
+
+a.gbLink-uploadapplet_UploadAppletSiteAdmin:hover, .gbLink-uploadapplet_UploadAppletSiteAdmin a:hover {
+  background: url(hover/uploadapplet.gif) left center no-repeat;
+}
+.gbLink-uploadapplet_UploadAppletSiteAdmin {
+  background: url(uploadapplet.gif) left center no-repeat;
+}
+
+a.gbLink-webcam_WebCamSiteAdmin:hover, .gbLink-webcam_WebCamSiteAdmin a:hover {
+  background: url(hover/webcam.gif) left center no-repeat;
+}
+.gbLink-webcam_WebCamSiteAdmin {
+  background: url(webcam.gif) left center no-repeat;
+}
+
+/* Extra Data */
+a.gbLink-comment_AddComment:hover, .gbLink-comment_AddComment a:hover,
+a.gbLink-comment_CommentSiteAdmin:hover, .gbLink-comment_CommentSiteAdmin a:hover {
+  background: url(hover/add_comment.gif) left center no-repeat;
+}
+.gbLink-comment_AddComment,
+.gbLink-comment_CommentSiteAdmin {
+  background: url(add_comment.gif) left center no-repeat;
+}
+
+a.gbLink-comment_ShowAllComments:hover, .gbLink-comment_ShowAllComments a:hover,
+a.gbLink-core_ItemAdmin-comment_ShowComments:hover, .gbLink-core_ItemAdmin-comment_ShowComments a:hover {
+  background: url(hover/view_comment.gif) left center no-repeat;
+}
+.gbLink-comment_ShowAllComments,
+.gbLink-core_ItemAdmin-comment_ShowComments {
+  background: url(view_comment.gif) left center no-repeat;
+}
+
+a.gbLink-customfield_CustomFieldSiteAdmin:hover, .gbLink-customfield_CustomFieldSiteAdmin a:hover {
+  background: url(hover/custom_fields.gif) left center no-repeat;
+}
+.gbLink-customfield_CustomFieldSiteAdmin {
+  background: url(custom_fields.gif) left center no-repeat;
+}
+
+a.gbLink-exif_AdminExif:hover, .gbLink-exif_AdminExif a:hover {
+  background: url(hover/exif_parser.gif) left center no-repeat;
+}
+.gbLink-exif_AdminExif {
+  background: url(exif_parser.gif) left center no-repeat;
+}
+
+a.gbLink-getid3_AdminGetid3:hover, .gbLink-getid3_AdminGetid3 a:hover {
+  background: url(hover/getid3.gif) left center no-repeat;
+}
+.gbLink-getid3_AdminGetid3 {
+  background: url(getid3.gif) left center no-repeat;
+}
+
+a.gbLink-mime_MimeAdmin:hover, .gbLink-mime_MimeAdmin a:hover {
+  background: url(hover/mime_types.gif) left center no-repeat;
+}
+.gbLink-mime_MimeAdmin {
+  background: url(mime_types.gif) left center no-repeat;
+}
+
+a.gbLink-multilang_MultiLangSiteAdmin:hover, .gbLink-multilang_MultiLangSiteAdmin a:hover {
+  background: url(hover/multilang.gif) left center no-repeat;
+}
+.gbLink-multilang_MultiLangSiteAdmin {
+  background: url(multilang.gif) left center no-repeat;
+}
+
+a.gbLink-rating_RatingSiteAdmin:hover, .gbLink-rating_RatingSiteAdmin a:hover {
+  background: url(hover/rating.gif) left center no-repeat;
+}
+.gbLink-rating_RatingSiteAdmin {
+  background: url(rating.gif) left center no-repeat;
+}
+
+/* Graphics Toolkits */
+
+a.gbLink-dcraw_AdminDcraw:hover, .gbLink-dcraw_AdminDcraw a:hover {
+  background: url(hover/dcraw.gif) left center no-repeat;
+}
+.gbLink-dcraw_AdminDcraw {
+  background: url(dcraw.gif) left center no-repeat;
+}
+
+a.gbLink-ffmpeg_AdminFfmpeg:hover, .gbLink-ffmpeg_AdminFfmpeg a:hover {
+  background: url(hover/ffmpeg.gif) left center no-repeat;
+}
+.gbLink-ffmpeg_AdminFfmpeg {
+  background: url(ffmpeg.gif) left center no-repeat;
+}
+
+a.gbLink-gd_AdminGd:hover, .gbLink-gd_AdminGd a:hover {
+  background: url(hover/gd.gif) left center no-repeat;
+}
+.gbLink-gd_AdminGd {
+  background: url(gd.gif) left center no-repeat;
+}
+
+a.gbLink-imagemagick_AdminImageMagick:hover, .gbLink-imagemagick_AdminImageMagick a:hover {
+  background: url(hover/image_magick.gif) left center no-repeat;
+}
+.gbLink-imagemagick_AdminImageMagick {
+  background: url(image_magick.gif) left center no-repeat;
+}
+
+a.gbLink-netpbm_AdminNetPbm:hover, .gbLink-netpbm_AdminNetPbm a:hover {
+  background: url(hover/pbm.gif) left center no-repeat;
+}
+.gbLink-netpbm_AdminNetPbm {
+  background: url(pbm.gif) left center no-repeat;
+}
+
+/* Blocks */
+
+a.gbLink-albumselect_AlbumSelectSiteAdmin:hover, .gbLink-albumselect_AlbumSelectSiteAdmin a:hover {
+  background: url(hover/albumselect.gif) left center no-repeat;
+}
+.gbLink-albumselect_AlbumSelectSiteAdmin {
+  background: url(albumselect.gif) left center no-repeat;
+}
+
+a.gbLink-imageblock_ImageBlockSiteAdmin:hover, .gbLink-imageblock_ImageBlockSiteAdmin a:hover {
+  background: url(hover/random_popular.gif) left center no-repeat;
+}
+.gbLink-imageblock_ImageBlockSiteAdmin {
+  background: url(random_popular.gif) left center no-repeat;
+}
+
+/* Gallery */
+
+a.gbLink-captcha_CaptchaSiteAdmin:hover, .gbLink-captcha_CaptchaSiteAdmin a:hover {
+  background: url(hover/captcha.gif) left center no-repeat;
+}
+.gbLink-captcha_CaptchaSiteAdmin {
+  background: url(captcha.gif) left center no-repeat;
+}
+
+a.gbLink-debug_ShowTree:hover, .gbLink-debug_ShowTree a:hover {
+  background: url(hover/debug_tree.gif) left center no-repeat;
+}
+.gbLink-debug_ShowTree {
+  background: url(debug_tree.gif) left center no-repeat;
+}
+
+a.gbLink-members_AdminMembers:hover, a.gbLink-members_MembersList:hover,
+.gbLink-members_AdminMembers a:hover, .gbLink-members_MembersList a:hover  {
+  background: url(hover/members.gif) left center no-repeat;
+}
+.gbLink-members_AdminMembers, .gbLink-members_MembersList {
+  background: url(members.gif) left center no-repeat;
+}
+
+a.gbLink-notification_NotificationSiteAdmin:hover, .gbLink-notification_NotificationSiteAdmin a:hover {
+  background: url(hover/email.gif) left center no-repeat;
+}
+.gbLink-notification_NotificationSiteAdmin {
+  background: url(email.gif) left center no-repeat;
+}
+
+a.gbLink-notification_NotificationUserAdmin:hover, a.gbLink-notification_NotificationItem:hover,
+.gbLink-notification_NotificationUserAdmin a:hover, .gbLink-notification_NotificationItem a:hover {
+  background: url(hover/magnifier.gif) left center no-repeat;
+}
+.gbLink-notification_NotificationUserAdmin, .gbLink-notification_NotificationItem {
+  background: url(magnifier.gif) left center no-repeat;
+}
+
+a.gbLink-permalinks_PermalinksSiteAdmin:hover, .gbLink-permalinks_PermalinksSiteAdmin a:hover {
+  background: url(hover/permalinks.gif) left center no-repeat;
+}
+.gbLink-permalinks_PermalinksSiteAdmin {
+  background: url(permalinks.gif) left center no-repeat;
+}
+
+a.gbLink-quotas_AdminQuotas:hover, .gbLink-quotas_AdminQuotas a:hover {
+  background: url(hover/quotas.gif) left center no-repeat;
+}
+.gbLink-quotas_AdminQuotas {
+  background: url(quotas.gif) left center no-repeat;
+}
+
+a.gbLink-register_AdminSelfRegistration:hover, .gbLink-register_AdminSelfRegistration a:hover {
+  background: url(hover/registration.gif) left center no-repeat;
+}
+.gbLink-register_AdminSelfRegistration {
+  background: url(registration.gif) left center no-repeat;
+}
+
+a.gbLink-rewrite_AdminRewrite:hover, .gbLink-rewrite_AdminRewrite a:hover {
+  background: url(hover/url_rewrite.gif) left center no-repeat;
+}
+.gbLink-rewrite_AdminRewrite {
+  background: url(url_rewrite.gif) left center no-repeat;
+}
+
+a.gbLink-search_SearchScan:hover, .gbLink-search_SearchScan a:hover {
+  background: url(hover/advanced_search.gif) left center no-repeat;
+}
+.gbLink-search_SearchScan {
+  background: url(advanced_search.gif) left center no-repeat;
+}
+
+a.gbLink-useralbum_UserAlbumSiteAdmin:hover, .gbLink-useralbum_UserAlbumSiteAdmin a:hover {
+  background: url(hover/user_albums.gif) left center no-repeat;
+}
+.gbLink-useralbum_UserAlbumSiteAdmin {
+  background: url(user_albums.gif) left center no-repeat;
+}
+
+/* Display */
+
+a.gbLink-dynamicalbum_DynamicAlbumSiteAdmin:hover, a.gbLink-dynamicalbum_UpdatesAlbum:hover,
+a.gbLink-dynamicalbum_PopularAlbum:hover, a.gbLink-dynamicalbum_RandomAlbum:hover,
+.gbLink-dynamicalbum_DynamicAlbumSiteAdmin a:hover, .gbLink-dynamicalbum_UpdatesAlbum a:hover,
+.gbLink-dynamicalbum_PopularAlbum a:hover, .gbLink-dynamicalbum_RandomAlbum a:hover {
+  background: url(hover/dynamic_album.gif) left center no-repeat;
+}
+.gbLink-dynamicalbum_DynamicAlbumSiteAdmin, .gbLink-dynamicalbum_UpdatesAlbum,
+.gbLink-dynamicalbum_PopularAlbum, .gbLink-dynamicalbum_RandomAlbum {
+  background: url(dynamic_album.gif) left center no-repeat;
+}
+
+a.gbLink-icons_IconsSiteAdmin:hover, .gbLink-icons_IconsSiteAdmin a:hover {
+  background: url(hover/icon_module.gif) left center no-repeat;
+}
+.gbLink-icons_IconsSiteAdmin {
+  background: url(icon_module.gif) left center no-repeat;
+}
+
+a.gbLink-keyalbum_KeywordAlbumSiteAdmin:hover, .gbLink-keyalbum_KeywordAlbumSiteAdmin a:hover {
+  background: url(hover/keyword_album.gif) left center no-repeat;
+}
+.gbLink-keyalbum_KeywordAlbumSiteAdmin {
+  background: url(keyword_album.gif) left center no-repeat;
+}
+
+a.gbLink-linkitem_LinkItemSiteAdmin:hover, .gbLink-linkitem_LinkItemSiteAdmin a:hover {
+  background: url(hover/create_link.gif) left center no-repeat;
+}
+.gbLink-linkitem_LinkItemSiteAdmin {
+  background: url(create_link.gif) left center no-repeat;
+}
+
+.gbLink-newitems_NewItemsSiteAdmin:hover {
+  background: url(hover/new_items.gif) left center no-repeat;
+}
+.gbLink-newitems_NewItemsSiteAdmin {
+  background: url(new_items.gif) left center no-repeat;
+}
+
+a.gbLink-panorama_PanoramaSiteAdmin:hover, a.gbLink-panorama_Panorama:hover,
+.gbLink-panorama_PanoramaSiteAdmin a:hover, .gbLink-panorama_Panorama a:hover {
+  background: url(hover/panorama.gif) left center no-repeat;
+}
+.gbLink-panorama_PanoramaSiteAdmin, .gbLink-panorama_Panorama {
+  background: url(panorama.gif) left center no-repeat;
+}
+
+a.gbLink-randomhighlight_RandomHighlightSiteAdmin:hover, .gbLink-randomhighlight_RandomHighlightSiteAdmin a:hover {
+  background: url(hover/random_highlight.gif) left center no-repeat;
+}
+.gbLink-randomhighlight_RandomHighlightSiteAdmin {
+  background: url(random_highlight.gif) left center no-repeat;
+}
+
+a.gbLink-core_ItemAdmin-rearrange_RearrangeItems:hover, .gbLink-core_ItemAdmin-rearrange_RearrangeItems a:hover {
+  background: url(hover/reorder_items.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-rearrange_RearrangeItems {
+  background: url(reorder_items.gif) left center no-repeat;
+}
+
+a.gbLink-core_ItemAdmin-replica_ItemCreateReplica:hover,
+.gbLink-core_ItemAdmin-replica_ItemCreateReplica a:hover,
+a.gbLink-core_ItemAdmin-replica_ItemCreateReplicaSingle:hover,
+.gbLink-core_ItemAdmin-replica_ItemCreateReplicaSingle a:hover, {
+  background: url(hover/page_copy.gif) left center no-repeat;
+}
+.gbLink-core_ItemAdmin-replica_ItemCreateReplica,
+.gbLink-core_ItemAdmin-replica_ItemCreateReplicaSingle {
+  background: url(page_copy.gif) left center no-repeat;
+}
+
+a.gbLink-slideshow_Slideshow:hover, .gbLink-slideshow_Slideshow a:hover {
+  background: url(hover/view_slideshow.gif) left bottom no-repeat;
+}
+.gbLink-slideshow_Slideshow {
+  background: url(view_slideshow.gif) left bottom no-repeat;
+}
+
+a.gbLink-slideshowapplet_SlideshowApplet:hover, .gbLink-slideshowapplet_SlideshowApplet a:hover,
+a.gbLink-slideshowapplet_SlideshowAppletSiteAdmin:hover, .gbLink-slideshowapplet_SlideshowAppletSiteAdmin a:hover {
+  background: url(hover/view_fullscreen_slideshow.gif) left center no-repeat;
+}
+.gbLink-slideshowapplet_SlideshowApplet,
+.gbLink-slideshowapplet_SlideshowAppletSiteAdmin {
+  background: url(view_fullscreen_slideshow.gif) left center no-repeat;
+}
+
+a.gbLink-squarethumb_SquareThumbSiteAdmin:hover, .gbLink-squarethumb_SquareThumbSiteAdmin a:hover {
+  background: url(hover/squarethumb.gif) left center no-repeat;
+}
+.gbLink-squarethumb_SquareThumbSiteAdmin {
+  background: url(squarethumb.gif) left center no-repeat;
+}
+
+a.gbLink-thumbnail_ThumbnailSiteAdmin:hover, .gbLink-thumbnail_ThumbnailSiteAdmin a:hover {
+  background: url(hover/thumbnails.gif) left center no-repeat;
+}
+.gbLink-thumbnail_ThumbnailSiteAdmin {
+  background: url(thumbnails.gif) left center no-repeat;
+}
+
+a.gbLink-watermark_WatermarkSiteAdmin:hover, .gbLink-watermark_WatermarkSiteAdmin a:hover,
+a.gbLink-watermark_UserWatermarks:hover, .gbLink-watermark_UserWatermarks a:hover {
+  background: url(hover/watermark.gif) left center no-repeat;
+}
+.gbLink-watermark_WatermarkSiteAdmin,
+.gbLink-watermark_UserWatermarks {
+  background: url(watermark.gif) left center no-repeat;
+}
+
+/* Commerce */
+
+a.gbLink-ecard_SendEcard:hover, .gbLink-ecard_SendEcard a:hover,
+a.gbLink-ecard_AdminEcard:hover, .gbLink-ecard_AdminEcard a:hover {
+  background: url(hover/ecard.gif) left center no-repeat;
+}
+.gbLink-ecard_SendEcard,
+.gbLink-ecard_AdminEcard {
+  background: url(ecard.gif) left center no-repeat;
+}
+
+a.gbLink-cart_ViewCart:hover, .gbLink-cart_ViewCart a:hover {
+  background: url(hover/cart.gif) left center no-repeat;
+}
+.gbLink-cart_ViewCart {
+  background: url(cart.gif) left center no-repeat;
+}
+
+a.gbLink-cart_AddToCart:hover, .gbLink-cart_AddToCart a:hover {
+  background: url(hover/add_cart.gif) left center no-repeat;
+}
+.gbLink-cart_AddToCart {
+  background: url(add_cart.gif) left center no-repeat;
+}
+
+a.gbLink-digibug_DigibugPrintPhotos:hover, .gbLink-digibug_DigibugPrintPhotos a:hover {
+  background: url(hover/digibug-print.gif) left center no-repeat;
+}
+.gbLink-digibug_DigibugPrintPhotos {
+  background: url(digibug-print.gif) left center no-repeat;
+}
+
+a.gbLink-digibug_AdminDigibug:hover, .gbLink-digibug_AdminDigibug a:hover {
+  background: url(hover/digibug-admin.gif) left center no-repeat;
+}
+.gbLink-digibug_AdminDigibug {
+  background: url(digibug-admin.gif) left center no-repeat;
+}
+
+a.gbLink-fotokasten_PrintPhotos:hover, .gbLink-fotokasten_PrintPhotos a:hover {
+  background: url(hover/fotokasten-print.gif) left center no-repeat;
+}
+.gbLink-fotokasten_PrintPhotos {
+  background: url(fotokasten-print.gif) left center no-repeat;
+}
+
+a.gbLink-fotokasten_FotokastenSiteAdmin:hover, .gbLink-fotokasten_FotokastenSiteAdmin a:hover {
+  background: url(hover/fotokasten-admin.gif) left center no-repeat;
+}
+.gbLink-fotokasten_FotokastenSiteAdmin {
+  background: url(fotokasten-admin.gif) left center no-repeat;
+}
+
+a.gbLink-photoaccess_PrintPhoto:hover, .gbLink-photoaccess_PrintPhoto a:hover {
+  background: url(hover/print.gif) left center no-repeat;
+}
+.gbLink-photoaccess_PrintPhoto {
+  background: url(print.gif) left center no-repeat;
+}
+
+a.gbLink-shutterfly_PrintPhotos:hover, .gbLink-shutterfly_PrintPhotos a:hover {
+  background: url(hover/shutterfly-print.gif) left center no-repeat;
+}
+.gbLink-shutterfly_PrintPhotos {
+  background: url(shutterfly-print.gif) left center no-repeat;
+}
+
+a.gbLink-zipcart_ZipCartAdmin:hover, .gbLink-zipcart_ZipCartAdmin a:hover {
+  background: url(hover/zip_download.gif) left center no-repeat;
+}
+.gbLink-zipcart_ZipCartAdmin {
+  background: url(zip_download.gif) left center no-repeat;
+}
+
+
+/* Authentication */
+
+a.gbLink-httpauth_HttpAuthSiteAdmin:hover, .gbLink-httpauth_HttpAuthSiteAdmin a:hover {
+  background: url(hover/change_password.gif) left center no-repeat;
+}
+.gbLink-httpauth_HttpAuthSiteAdmin {
+  background: url(change_password.gif) left center no-repeat;
+}
+
+/* Remote Interfaces */
+a.gbLink-remote_RemoteSiteAdmin:hover, .gbLink-remote_RemoteSiteAdmin a:hover {
+  background: url(hover/remote.gif) left center no-repeat;
+}
+.gbLink-remote_RemoteSiteAdmin {
+  background: url(remote.gif) left center no-repeat;
+}
+a.gbLink-webdav_WebDavSiteAdmin:hover, .gbLink-webdav_WebDavSiteAdmin a:hover, a.gbLink-webdav_WebDavMount:hover, .gbLink-webdav_WebDavMount a:hover{
+  background: url(hover/folder_picture.gif) left center no-repeat;
+}
+.gbLink-webdav_WebDavSiteAdmin, .gbLink-webdav_WebDavMount {
+  background: url(folder_picture.gif) left center no-repeat;
+}
+
+/* Export */
+
+.gbLink-rss_SimpleRender:hover, .gbLink-core_ItemAdmin-rss_EditFeed:hover, .gbLink-rss_RssSiteAdmin:hover {
+  background: url(rss_feed.gif) left center no-repeat;
+}
+.gbLink-rss_SimpleRender, .gbLink-core_ItemAdmin-rss_EditFeed, .gbLink-rss_RssSiteAdmin {
+  background: url(rss_feed.gif) left center no-repeat;
+}
+
+.gbLink-sitemap_AdminSitemap:hover {
+  background: url(hover/google_sitemap.gif) left center no-repeat;
+}
+.gbLink-sitemap_AdminSitemap {
+  background: url(google_sitemap.gif) left center no-repeat;
+}
+
+/* Xtreme theme */
+
+a.tLink-first:hover img{
+  background: url(hover/nav_first.gif) left center no-repeat;
+}
+a.tLink-first img{
+  background: url(nav_first.gif) left center no-repeat;
+}
+
+a.tLink-back:hover img{
+  background: url(hover/nav_back.gif) left center no-repeat;
+}
+a.tLink-back img{
+  background: url(nav_back.gif) left center no-repeat;
+}
+
+a.tLink-next:hover img{
+  background: url(hover/nav_next.gif) left center no-repeat;
+}
+a.tLink-next img{
+  background: url(nav_next.gif) left center no-repeat;
+}
+
+a.tLink-last:hover img{
+  background: url(hover/nav_last.gif) left center no-repeat;
+}
+a.tLink-last img{
+  background: url(nav_last.gif) left center no-repeat;
+}
+
+a.tLink-gallery:hover img{
+  background: url(hover/gallery.gif) left center no-repeat;
+}
+a.tLink-gallery img{
+  background: url(gallery.gif) left center no-repeat;
+}
+
+a.tLink-album:hover img{
+  background: url(hover/album.gif) left center no-repeat;
+}
+a.tLink-album img{
+  background: url(album.gif) left center no-repeat;
+}
+
+a.tLink-thumbnails:hover img{
+  background: url(hover/thumbnails.gif) left center no-repeat;
+}
+a.tLink-thumbnails img{
+  background: url(thumbnails.gif) left center no-repeat;
+}
+
+a.tLink-view_slideshow:hover img{
+  background: url(hover/view_slideshow.gif) left center no-repeat;
+}
+a.tLink-view_slideshow img{
+  background: url(view_slideshow.gif) left center no-repeat;
+}
+
+a.tLink-image_popup:hover img{
+  background: url(hover/image_popup.gif) left center no-repeat;
+}
+a.tLink-image_popup img{
+  background: url(image_popup.gif) left center no-repeat;
+}
+
+a.tLink-add_comment:hover img{
+  background: url(hover/add_comment.gif) left center no-repeat;
+}
+a.tLink-add_comment img{
+  background: url(add_comment.gif) left center no-repeat;
+}
+
+a.tLink-view_comment:hover img{
+  background: url(hover/view_comment.gif) left center no-repeat;
+}
+a.tLink-view_comment img{
+  background: url(view_comment.gif) left center no-repeat;
+}
+
+a.tLink-add_cart:hover img{
+  background: url(hover/add_cart.gif) left center no-repeat;
+}
+a.tLink-add_cart img{
+  background: url(add_cart.gif) left center no-repeat;
+}
+
+a.tLink-view_cart:hover img{
+  background: url(hover/view_cart.gif) left center no-repeat;
+}
+a.tLink-view_cart img{
+  background: url(view_cart.gif) left center no-repeat;
+}
+
+a.tLink-exif_parser:hover img{
+  background: url(hover/exif_parser.gif) left center no-repeat;
+}
+a.tLink-exif_parser img{
+  background: url(exif_parser.gif) left center no-repeat;
+}
+
+a.tLink-ecard:hover img{
+  background: url(hover/ecard.gif) left center no-repeat;
+}
+a.tLink-ecard img{
+  background: url(ecard.gif) left center no-repeat;
+}
+
+a.tLink-image_block:hover img{
+  background: url(hover/image_block.gif) left center no-repeat;
+}
+a.tLink-image_block img{
+  background: url(image_block.gif) left center no-repeat;
+}
+
+a.tLink-info_expand:hover img{
+  background: url(hover/info_expand.gif) left center no-repeat;
+}
+a.tLink-info_expand img{
+  background: url(info_expand.gif) left center no-repeat;
+}
+
+a.tLink-info_collapse:hover img{
+  background: url(hover/info_collapse.gif) left center no-repeat;
+}
+a.tLink-info_collapse img{
+  background: url(info_collapse.gif) left center no-repeat;
+}
+
+a.tLink-options_expand:hover img{
+  background: url(hover/options_expand.gif) left center no-repeat;
+}
+a.tLink-options_expand img{
+  background: url(options_expand.gif) left center no-repeat;
+}
+
+a.tLink-options_collapse:hover img{
+  background: url(hover/options_collapse.gif) left center no-repeat;
+}
+a.tLink-options_collapse img{
+  background: url(options_collapse.gif) left center no-repeat;
+}
+
+a.tLink-control_stop:hover img{
+  background: url(hover/control_stop.gif) left center no-repeat;
+}
+a.tLink-control_stop img{
+  background: url(control_stop.gif) left center no-repeat;
+}
+
+a.tLink-control_start:hover img{
+  background: url(hover/control_start.gif) left center no-repeat;
+}
+a.tLink-control_start img{
+  background: url(control_start.gif) left center no-repeat;
+}
+
+a.tLink-control_pause:hover img{
+  background: url(hover/control_pause.gif) left center no-repeat;
+}
+a.tLink-control_pause img{
+  background: url(control_pause.gif) left center no-repeat;
+}
+
+a.tLink-control_next:hover img{
+  background: url(hover/control_next.gif) left center no-repeat;
+}
+a.tLink-control_next img{
+  background: url(control_next.gif) left center no-repeat;
+}
+
+a.tLink-control_back:hover img{
+  background: url(hover/control_back.gif) left center no-repeat;
+}
+a.tLink-control_back img{
+  background: url(control_back.gif) left center no-repeat;
+}
+
+a.tLink-close img{
+  background: url(close.gif) left center no-repeat;
+}
