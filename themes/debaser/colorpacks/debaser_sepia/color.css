@@ -1,0 +1,58 @@
+/* ^PHPCS_CSS_T_OPEN_TAG^ $colorpackName = $gallery->i18n('Debaser Sepia'); ^PHPCS_CSS_T_CLOSE_TAG^
+ * $Revision: 910 $
+ */
+
+#gallery {
+  color: #222222 !important;
+  background-color: #ddcca5 !important;
+}
+body.gallery { background-color: #ddcca5 !important; }
+
+.gcBackground1 { color: #CCCCCC !important; background-color: #51261c !important; }
+.gcBackground2 { color: #999999 !important; background-color: #e2d6b5 !important; }
+.gcBackground3 { color: #000000 !important; background-color: #ddcca5 !important; } /* #edd3bc */
+
+/* special styles for the tabs */
+div .gbTabBar { border-color: #000000 !important; }
+#gallery div.gbTabBar span span {
+	color: #000000 !important;
+	background-color: #e2d6b5 !important;
+	border-color: #999999 !important; }
+#gallery div.gbTabBar span.giSelected span {
+	color: #000000 !important;
+	background-color: #ddcca5 !important;
+	border-color: #000000 !important;
+	border-bottom-color: #ddcca5 !important;}
+
+/*
+.gcFont1 { color: #FF0000 !important; }
+.gcFont2 { color: #00FF00 !important; }
+*/
+.gcBorder1 { border-color: #111111 !important; }
+.gcBorder2 { border-color: #555555 !important; }
+
+#gallery a { color: #776666 !important; }
+#gallery a:hover { color: #999999 !important; }
+#gallery a:active { color: #778888 !important; }
+
+.giSuccess { color: #190 !important; }
+.giWarning { color: #b31 !important; }
+.giError { color: #d14 !important; }
+.giInfo { color: #103 !important; }
+.giTitle { color: #000000 !important; }
+.giDescription { color: #AAAAAA !important; }
+.giInfo { color: #000000 !important; }
+.block-core-PeerList .current { color: #67b !important; }
+
+/*
+table.gbDataTable th { background-color: #BBBBBB !important; }
+.gbEven { color: #DDDDDD !important; background-color: #555555 !important; }
+.gbOdd { color: #BBBBBB !important; background-color: #111111 !important; }
+*/
+table.gbDataTable th { background-color: #777777 !important; }
+.gbEven { color: #222222 !important; background-color: #CCCCCC !important; }
+.gbOdd { color: #444444 !important; background-color: #EEEEEE !important; }
+
+input.inputTypeSubmit, input.inputTypeButton { background-color: #ecc !important; }
+#gallery select { background-color: #fdd !important; }
+
