@@ -29,11 +29,15 @@ class x_tremeTheme extends GalleryTheme {
 
 		$this->setId('x_treme');
 		$this->setName($gallery->i18n('X_treme'));
-		$this->setDescription($gallery->i18n('PedroGilberto.net Gallery2 theme'));
+		$this->setDescription(
+			$gallery->i18n(
+				'X-Treme Theme for Gallery2 by PedroGilberto.net'
+			)
+		);
 
-		$this->setVersion('7.0.0');
-		$this->setRequiredCoreApi(array(7, 10));
-		$this->setRequiredThemeApi(array(2, 4));
+		$this->setVersion('2.0.0');
+		$this->setRequiredCoreApi(array(8, 0));
+		$this->setRequiredThemeApi(array(3, 0));
 
 		$this->setStandardSettings(
 			array(

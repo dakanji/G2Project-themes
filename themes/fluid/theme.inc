@@ -40,11 +40,15 @@ class FluidTheme extends GalleryTheme {
 
 		$this->setId('fluid');
 		$this->setName($gallery->i18n('Fluid'));
-		$this->setDescription($gallery->i18n('A Flash based Theme'));
+		$this->setDescription(
+			$gallery->i18n(
+				'A Flash based Theme'
+			)
+		);
 
-		$this->setVersion('7.0.0');
-		$this->setRequiredCoreApi(array(7, 0));
-		$this->setRequiredThemeApi(array(2, 1));
+		$this->setVersion('1.0.0');
+		$this->setRequiredCoreApi(array(8, 0));
+		$this->setRequiredThemeApi(array(3, 0));
 
 		$this->setStandardSettings(
 			array(

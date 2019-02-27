@@ -30,10 +30,16 @@ class ShadowMatrixTheme extends GalleryTheme {
 
 		$this->setId('shadowmatrix');
 		$this->setName($gallery->i18n('ShadowMatrix'));
-		$this->setDescription($gallery->i18n('Matrix theme w/ Shadowbox'));
-		$this->setVersion('1.1.7');
-		$this->setRequiredCoreApi(array(7, 20));
-		$this->setRequiredThemeApi(array(2, 4));
+		$this->setDescription(
+			$gallery->i18n(
+				'Matrix Theme with Shadowbox'
+			)
+		);
+
+		$this->setVersion('2.0.0');
+		$this->setRequiredCoreApi(array(8, 0));
+		$this->setRequiredThemeApi(array(3, 0));
+
 		$this->setStandardSettings(
 			array(
 				'rows'            => 3,

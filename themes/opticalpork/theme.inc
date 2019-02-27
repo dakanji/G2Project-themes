@@ -29,11 +29,15 @@ class OpticalporkTheme extends GalleryTheme {
 
 		$this->setId('opticalpork');
 		$this->setName($gallery->i18n('Opticalpork'));
-		$this->setDescription($gallery->i18n('Opticalpork.com Gallery theme'));
+		$this->setDescription(
+			$gallery->i18n(
+				'Opticalpork.com Gallery theme'
+			)
+		);
 
-		$this->setVersion('7.0.0');
-		$this->setRequiredCoreApi(array(7, 0));
-		$this->setRequiredThemeApi(array(2, 2));
+		$this->setVersion('2.0.0');
+		$this->setRequiredCoreApi(array(8, 0));
+		$this->setRequiredThemeApi(array(3, 0));
 
 		$this->setStandardSettings(
 			array(

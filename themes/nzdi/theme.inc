@@ -38,11 +38,15 @@ class NZDITheme extends GalleryTheme {
 
 		$this->setId('nzdi');
 		$this->setName($gallery->i18n('NZDI'));
-		$this->setDescription($gallery->i18n('NZ Digital Images theme'));
+		$this->setDescription(
+			$gallery->i18n(
+				'NZ Digital Images theme'
+			)
+		);
 
-		$this->setVersion('7.0.0');
-		$this->setRequiredCoreApi(array(7, 4));
-		$this->setRequiredThemeApi(array(2, 4));
+		$this->setVersion('2.0.0');
+		$this->setRequiredCoreApi(array(8, 0));
+		$this->setRequiredThemeApi(array(3, 0));
 
 		$this->setStandardSettings(
 			array(
